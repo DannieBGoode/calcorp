@@ -19,8 +19,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Calcorp"
+  : "Calcorp Andorra";
 
 // Language detection based on URL path
 let lang = 'en'; // default language
@@ -42,7 +42,7 @@ if (Astro.url.pathname.startsWith('/es/')) {
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Calcorp Andorra"
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -53,11 +53,11 @@ if (Astro.url.pathname.startsWith('/es/')) {
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Calcorp`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Calcorp",
         },
       }}
     />

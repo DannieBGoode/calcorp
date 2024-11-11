@@ -1,6 +1,6 @@
 export const heroTexts = {
   heading: "Moderniza tu negocio",
-  paragraph: "Astroship es una plantilla de sitio web de inicio para Astro construida con TailwindCSS.",
+  paragraph: "Creamos soluciones a medida para digitalizar tu negocio",
   exploreServices: "Explorar Servicios",
   contactUs: "Contáctanos"
 };

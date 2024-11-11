@@ -1,5 +1,5 @@
 export const featuresTexts = {
-  heading: "Característiques de CALCORP",
+  heading: "Serveis de CALCORP",
   paragraph: "Descobreix com CALCORP pot transformar la teva presència digital amb les nostres solucions web.",
   features: [
     {

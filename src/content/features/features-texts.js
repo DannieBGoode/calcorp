@@ -1,35 +1,35 @@
 export const featuresTexts = {
-  heading: "Everything you need to start a website",
-  paragraph: "Astro comes batteries included. It takes the best parts of state-of-the-art tools and adds its own innovations.",
+  heading: "CALCORP Services",
+  paragraph: "Discover how CALCORP can transform your digital presence with our web solutions.",
   features: [
     {
-      title: "Bring Your Own Framework",
-      description: "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      title: "Customized Technology",
+      description: "We develop solutions tailored to your needs, using the most advanced web technologies, such as React, Vue, or simple HTML solutions.",
       icon: "bx:bxs-briefcase",
     },
     {
-      title: "100% Static HTML, No JS",
-      description: "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      title: "Performance Optimization",
+      description: "We create highly optimized pages for fast loading, without unnecessary code, to provide the best user experience.",
       icon: "bx:bxs-window-alt",
     },
     {
-      title: "On-Demand Components",
-      description: "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.",
+      title: "Smart Interactivity",
+      description: "We add interactivity to your page only when necessary, maximizing efficiency and load speed.",
       icon: "bx:bxs-data",
     },
     {
-      title: "Broad Integration",
-      description: "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      title: "Complete Integration",
+      description: "We offer advanced functionalities with support for TypeScript, CSS, Sass, Tailwind, Markdown, and much more.",
       icon: "bx:bxs-bot",
     },
     {
-      title: "SEO Enabled",
-      description: "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      title: "SEO Optimized",
+      description: "We include SEO practices to ensure your site’s visibility: sitemaps, RSS, and more to help improve your search engine ranking.",
       icon: "bx:bxs-file-find",
     },
     {
-      title: "Community",
-      description: "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+      title: "Community Support",
+      description: "We are part of a developer community dedicated to innovating and sharing knowledge.",
       icon: "bx:bxs-user",
     },
   ]
