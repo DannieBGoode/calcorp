@@ -1,6 +1,7 @@
 export const heroTexts = {
-  heading: "Benvingut a Astroship",
-  paragraph: "Astroship és una plantilla de lloc web d'inici per a Astro construïda amb TailwindCSS.",
+  heading: "Benvingut a CALCORP",
+  paragraph: "Creem solucions web a mida per impulsar el teu negoci en línia.",
+  exploreServices: "Descobreix els nostres serveis",
   exploreServices: "Explora Serveis",
   contactUs: "Contacta'ns"
 };

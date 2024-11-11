@@ -1,35 +1,35 @@
 export const featuresTexts = {
-  heading: "Característiques d'Astroship",
-  paragraph: "Descobreix les característiques que fan d'Astroship una plantilla única.",
+  heading: "Característiques de CALCORP",
+  paragraph: "Descobreix com CALCORP pot transformar la teva presència digital amb les nostres solucions web.",
   features: [
     {
-      title: "Porta el Teu Propi Framework",
-      description: "Construeix el teu lloc utilitzant React, Svelte, Vue, Preact, components web o simplement HTML i JavaScript.",
+      title: "Tecnologia Personalitzada",
+      description: "Construïm solucions adaptades a les teves necessitats, utilitzant les tecnologies web més avançades, com React, Vue o simples solucions HTML.",
       icon: "bx:bxs-briefcase",
     },
     {
-      title: "100% HTML Estàtic, Sense JS",
-      description: "Astro converteix tota la teva pàgina en HTML estàtic, eliminant tot el JavaScript de la teva compilació final per defecte.",
+      title: "Optimització de Rendiment",
+      description: "Creem pàgines altament optimitzades per a una càrrega ràpida, sense codi innecessari, per oferir la millor experiència a l'usuari.",
       icon: "bx:bxs-window-alt",
     },
     {
-      title: "Components a Demanda",
-      description: "Necessites una mica de JS? Astro pot activar automàticament components interactius quan es fan visibles a la pàgina.",
+      title: "Interactivitat Intel·ligent",
+      description: "Afegim interactivitat a la teva pàgina només quan és necessari, maximitzant l'eficiència i la velocitat de càrrega.",
       icon: "bx:bxs-data",
     },
     {
-      title: "Àmplia Integració",
-      description: "Astro admet TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX i qualsevol altre paquet de npm.",
+      title: "Integració Completa",
+      description: "Ofereix funcionalitats avançades amb suport per TypeScript, CSS, Sass, Tailwind, Markdown i molt més.",
       icon: "bx:bxs-bot",
     },
     {
-      title: "SEO Activat",
-      description: "Sitemaps automàtics, fonts RSS, paginació i col·leccions faciliten el SEO i la sindicació. Funciona de manera impecable!",
+      title: "SEO Optimitzat",
+      description: "Incloem pràctiques de SEO per assegurar la visibilitat del teu lloc: sitemaps, RSS, i més per ajudar a la teva posició en cercadors.",
       icon: "bx:bxs-file-find",
     },
     {
-      title: "Comunitat",
-      description: "Astro és un projecte de codi obert impulsat per centenars de col·laboradors que realitzen milers de contribucions individuals.",
+      title: "Suport de Comunitat",
+      description: "Formem part d'una comunitat de desenvolupadors que es dediquen a innovar i compartir coneixement.",
       icon: "bx:bxs-user",
     },
   ]
