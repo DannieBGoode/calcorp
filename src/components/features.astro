@@ -1,9 +1,16 @@
 ---
-// @ts-ignore
 import { Icon } from "astro-icon/components";
-import { featuresTexts } from "../../src/content/features/features-texts.js";
 
-const features = featuresTexts.features;
+// Determine the language and import the appropriate features texts
+let featuresTexts;
+const url = new URL(Astro.request.url);
+if (url.pathname.startsWith('/es')) {
+  featuresTexts = await import("../content/features/features-texts.es.js").then(module => module.featuresTexts);
+} else if (url.pathname.startsWith('/cat')) {
+  featuresTexts = await import("../content/features/features-texts.cat.js").then(module => module.featuresTexts);
+} else {
+  featuresTexts = await import("../content/features/features-texts.js").then(module => module.featuresTexts);
+}
 ---
 
 <div id="services" class="mt-16 md:mt-0">
@@ -17,7 +24,7 @@ const features = featuresTexts.features;
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
-    features.map((item) => (
+    featuresTexts.features.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />

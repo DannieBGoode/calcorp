@@ -1,4 +1,4 @@
-declare module '../../src/content/features/features-texts.js' {
+declare module '../features/features-texts.js' {
   export const featuresTexts: {
     heading: string;
     paragraph: string;

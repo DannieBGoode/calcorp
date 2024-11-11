@@ -13,5 +13,11 @@
       "@pages/*": ["pages/*"]
     },
     "allowJs": true
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.astro",
+    "src/**/*.js"
+  ]
 }

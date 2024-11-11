@@ -1,4 +1,4 @@
-declare module '../../src/content/hero-texts.js' {
+declare module '../hero/hero-texts.js' {
   export const heroTexts: {
     heading: string;
     paragraph: string;

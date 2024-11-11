@@ -3,7 +3,21 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
-import { heroTexts } from "../content/hero/hero-texts.js";
+
+// Determine the language and import the appropriate hero texts
+let heroTexts;
+const url = new URL(Astro.request.url);
+console.log("Current URL Path:", url.pathname);
+if (url.pathname.startsWith('/es')) {
+  console.log("Loading Spanish translations for Hero");
+  heroTexts = await import("../content/hero/hero-texts.es.js").then(module => module.heroTexts);
+} else if (url.pathname.startsWith('/cat')) {
+  console.log("Loading Catalan translations for Hero");
+  heroTexts = await import("../content/hero/hero-texts.cat.js").then(module => module.heroTexts);
+} else {
+  console.log("Loading default translations for Hero");
+  heroTexts = await import("../content/hero/hero-texts.js").then(module => module.heroTexts);
+}
 ---
 
 <main

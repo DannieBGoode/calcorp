@@ -4,8 +4,16 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
-/*   {
+// Define a type for menu items
+interface MenuItem {
+  title: string;
+  path: string;
+  children?: Array<{ title: string; path: string }>;
+  badge?: boolean;
+}
+
+const menuitems: MenuItem[] = [
+  /* {
     title: "Features",
     path: "#",
     children: [
@@ -23,7 +31,7 @@ const menuitems = [
     title: "About",
     path: "/about",
   },
-/*  {
+  /* {
     title: "Blog",
     path: "/blog",
   },*/
@@ -31,7 +39,7 @@ const menuitems = [
     title: "Contact",
     path: "/contact",
   },
-/*   {
+  /* {
     title: "Pro Version",
     badge: true,
     path: "https://astroship-pro.web3templates.com/",

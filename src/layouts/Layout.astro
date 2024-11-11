@@ -5,8 +5,6 @@ import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 
-
-
 export interface Props {
   title: string;
 }
@@ -23,10 +21,18 @@ const { title } = Astro.props;
 const makeTitle = title
   ? title + " | " + "Astroship"
   : "Astroship - Starter Template for Astro with Tailwind CSS";
+
+// Language detection based on URL path
+let lang = 'en'; // default language
+if (Astro.url.pathname.startsWith('/es/')) {
+  lang = 'es';
+} else if (Astro.url.pathname.startsWith('/cat/')) {
+  lang = 'cat';
+}
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
