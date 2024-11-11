@@ -93,6 +93,7 @@ if (urlPath.startsWith('/es')) {
 <script is:inline>
   const form = document.getElementById("form");
   const result = document.getElementById("result");
+  const formTexts = { ...texts }; // Ensure texts are available in the script
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -105,7 +106,7 @@ if (urlPath.startsWith('/es')) {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = texts.sendingMessage;
+    result.innerHTML = formTexts.sendingMessage;
 
     fetch("/", {
       method: "POST",
@@ -119,16 +120,16 @@ if (urlPath.startsWith('/es')) {
         let json = await response.json();
         if (response.status == 200) {
           result.classList.add("text-green-500");
-          result.innerHTML = texts.successMessage;
+          result.innerHTML = formTexts.successMessage;
         } else {
           console.log(response);
           result.classList.add("text-red-500");
-          result.innerHTML = texts.errorMessage;
+          result.innerHTML = formTexts.errorMessage;
         }
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = texts.errorMessage;
+        result.innerHTML = formTexts.errorMessage;
       })
       .then(function () {
         form.reset();
