@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import { aboutTexts } from "../content/about/about-texts.js";
+import { aboutTextsEs } from "../../content/about/about-texts.es.js";
 import AboutComponent from "@components/about.astro";
 
 // Filter team entries with 'draft: false' & date before current date
@@ -10,6 +10,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title={aboutTexts.title}>
-  <AboutComponent texts={aboutTexts} teamMembers={publishedTeamMembers} />
+<Layout title={aboutTextsEs.title}>
+  <AboutComponent texts={aboutTextsEs} teamMembers={publishedTeamMembers} />
 </Layout>
