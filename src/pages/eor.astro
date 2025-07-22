@@ -1,27 +1,6 @@
 ---
-import Container from "@components/container.astro";
-import Layout from "@layouts/Layout.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import EorFeatures from "@components/eorFeatures.astro";
-import Cta from "@components/cta.astro";
+import EorPage from "@components/EorPage.astro";
+import { eorFeatures } from "../content/eor/features-texts.js";
 ---
 
-<Layout title="Employee of Record in Andorra">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Employee of Record in Andorra</Fragment>
-      <Fragment slot="desc">Hire talent compliantly with CALCORP as your local employer of record.</Fragment>
-    </Sectionhead>
-
-    <div class="flex flex-col gap-6 mx-auto max-w-3xl mt-12 text-lg text-slate-600">
-      <p>CALCORP acts as the legal employer for your Andorran staff while you manage their day-to-day work. Our team handles employment contracts, payroll and ongoing compliance so you don't need to open a local entity.</p>
-      <p>Partnering with us gives you immediate access to the Andorran market with none of the administrative burden of hiring directly.</p>
-    </div>
-
-    <EorFeatures />
-
-    <div class="mt-12">
-      <Cta />
-    </div>
-  </Container>
-</Layout>
+<EorPage content={eorFeatures} lang="en" />

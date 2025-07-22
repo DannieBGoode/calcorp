@@ -4,6 +4,10 @@ export default [
     path: "/cat",
   },
   {
+    title: "EOR",
+    path: "/eor",
+  },
+  {
     title: "Sobre",
     path: "/about",
   },

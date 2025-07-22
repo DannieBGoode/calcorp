@@ -1,6 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
-import { eorFeatures } from "../content/eor/features.js";
+
+const { lang = "en" } = Astro.props;
+
+let eorFeatures;
+if (lang === "es") {
+  eorFeatures = (await import("../content/eor/features-texts.es.js")).eorFeatures;
+} else if (lang === "cat") {
+  eorFeatures = (await import("../content/eor/features-texts.cat.js")).eorFeatures;
+} else {
+  eorFeatures = (await import("../content/eor/features-texts.js")).eorFeatures;
+}
 ---
 
 <div id="benefits" class="mt-16">
