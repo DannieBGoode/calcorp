@@ -48,7 +48,13 @@ if (url.pathname.startsWith('/es')) {
         size="lg"
         style="outline"
         rel="noopener"
-        href="/contact"
+        href={
+          url.pathname.startsWith('/es')
+            ? '/es/contacto'
+            : url.pathname.startsWith('/cat')
+            ? '/cat/contacte'
+            : '/contact'
+        }
         class="flex gap-1 items-center justify-center">
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
          {heroTexts.contactUs}
