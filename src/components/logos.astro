@@ -1,10 +1,21 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
+
+const { lang = "en" } = Astro.props;
+
+let logosTexts;
+if (lang === "es") {
+  logosTexts = (await import("../content/logos-texts.es.js")).logosTexts;
+} else if (lang === "cat") {
+  logosTexts = (await import("../content/logos-texts.cat.js")).logosTexts;
+} else {
+  logosTexts = (await import("../content/logos-texts.js")).logosTexts;
+}
 ---
 
 <div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
+  <h2 class="text-center text-slate-500">{logosTexts.heading}</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
 
     <Icon class="size-8 md:size-12" name="simple-icons:react" />
