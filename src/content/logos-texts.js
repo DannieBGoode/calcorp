@@ -1,3 +1,3 @@
 export const logosTexts = {
-  heading: "The tech we use"
+  heading: "Want to know who already trusts us?"
 };

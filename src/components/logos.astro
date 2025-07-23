@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon/components";
+import { clients } from "../content/clients.js";
 
 const { lang = "en" } = Astro.props;
 
@@ -16,14 +17,21 @@ if (lang === "es") {
 
 <div class="mt-24">
   <h2 class="text-center text-slate-500">{logosTexts.heading}</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
-    <Icon class="size-8 md:size-12" name="simple-icons:astro" />
-    <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-    <Icon class="size-8 md:size-16" name="simple-icons:alpinedotjs" />
-    <Icon class="size-8 md:size-12" name="simple-icons:vercel" />
-
+  <div class="flex gap-8 md:gap-16 items-center justify-center mt-10 flex-wrap">
+    {
+      clients.map(client => (
+        <a href={client.href} target="_blank" rel="noopener" title={client.name}>
+          <div class="w-40 h-20 flex items-center justify-center overflow-hidden">
+            <img
+              src={client.imgSrc}
+              alt={client.alt}
+              width={client.width}
+              height={client.height}
+              class="object-contain filter grayscale transition w-full h-full"
+            />
+          </div>
+        </a>
+      ))
+    }
   </div>
 </div>
