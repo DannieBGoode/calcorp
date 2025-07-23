@@ -43,10 +43,12 @@ if (urlPath.startsWith('/es')) {
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
             <a href={`mailto:${texts.email}`}>{texts.email}</a>
           </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
-            <a href={`tel:${texts.phone}`}>{texts.phone}</a>
-          </div>
+          {texts.phone && texts.phone.trim() !== "" && (
+            <div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+              <a href={`tel:${texts.phone}`}>{texts.phone}</a>
+            </div>
+          )}
         </div>
       </div>
       <div>
