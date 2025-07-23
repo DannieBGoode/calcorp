@@ -1,6 +1,6 @@
 export const heroTexts = {
-  heading: "We digitalize your company",
-  paragraph: "We specialize in creating stunning websites that drive results. Our team of experts is dedicated to delivering top-notch web solutions tailored to your business needs.",
-  exploreServices: "Explore Our Services",
-  contactUs: "Contact Us"
+  heading: "Bring your business online",
+  paragraph: "We build websites that sell. Tell us what you need and we'll make it happen.",
+  exploreServices: "See Our Services",
+  contactUs: "Let's Talk"
 };

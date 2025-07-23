@@ -1,12 +1,12 @@
 export const eorFeatures = {
   title: "Employer of Record en Andorra",
-  description: "Contrata talento cumpliendo la ley con CALCORP como tu empleador local de referencia.",
+  description: "Contrata en Andorra sin abrir empresa.",
   intro: [
-    "CALCORP actúa como el empleador legal de tu personal en Andorra mientras tú gestionas su trabajo diario. Nuestro equipo se encarga de los contratos laborales, la nómina y el cumplimiento normativo para que no tengas que abrir una entidad local.",
-    "Colaborar con nosotros te da acceso inmediato al mercado andorrano sin la carga administrativa de contratar directamente."
+    "CALCORP es el empleador legal de tu equipo. Tú mandas, nosotros gestionamos contratos, nóminas y normativa.",
+    "Con nosotros accedes al mercado andorrano sin papeleos."
   ],
-  heading: "Ventajas de CALCORP como tu EOR",
-  paragraph: "Contrata profesionales en Andorra de forma rápida y cumpliendo la normativa sin necesidad de abrir una entidad local.",
+  heading: "Por qué CALCORP",
+  paragraph: "Contrata en Andorra rápido y cumpliendo la ley, sin montar una empresa.",
   features: [
     {
       title: "Cumplimiento Legal Total",

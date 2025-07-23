@@ -1,12 +1,12 @@
 export const eorFeatures = {
   title: "Employer of Record a Andorra",
-  description: "Contracta talent complint la llei amb CALCORP com a ocupador local de referència.",
+  description: "Contracta a Andorra sense obrir empresa.",
   intro: [
-    "CALCORP actua com l’ocupador legal del teu personal a Andorra mentre tu gestiones el seu treball diari. El nostre equip s’encarrega dels contractes laborals, la nòmina i el compliment normatiu perquè no hagis d’obrir una entitat local.",
-    "Col·laborar amb nosaltres et dona accés immediat al mercat andorrà sense la càrrega administrativa de contractar directament."
+    "CALCORP és l'ocupador legal del teu equip. Tu dirigeixes, nosaltres fem contractes, nòmines i complim la normativa.",
+    "Amb nosaltres entres al mercat andorrà sense tràmits."
   ],
-  heading: "Avantatges de CALCORP com a EOR",
-  paragraph: "Contracta professionals a Andorra de manera ràpida i complint la normativa sense necessitat d'obrir una entitat local.",
+  heading: "Per què CALCORP",
+  paragraph: "Contracta a Andorra ràpid i legalment sense crear una empresa.",
   features: [
     {
       title: "Compliment Legal Total",

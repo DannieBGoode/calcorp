@@ -1,8 +1,8 @@
 export default {
   pageTitle: "Contáctanos",
-  pageDescription: "Estamos aquí para ayudar.",
-  contactTitle: "Contacta con Calcorp",
-  contactDescription: "Estamos aquí para ayudar. Llena el formulario o envía un correo electrónico o llama por teléfono.",
+  pageDescription: "¿En qué podemos ayudarte?",
+  contactTitle: "Hablemos",
+  contactDescription: "Rellena el formulario o llámanos.",
   address: "Ordino, AD300",
   email: "hola@calcorp.io",
   phone: "+376",
