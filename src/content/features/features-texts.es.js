@@ -1,36 +1,56 @@
 export const featuresTexts = {
-  heading: "Servicios de CALCORP",
-  paragraph: "Descubre cómo CALCORP puede transformar tu presencia digital con nuestras soluciones web.",
+  heading: "¿Qué podemos hacer por ti?",
+  paragraph: "Soluciones claras para que tu negocio crezca.",
   features: [
     {
-      title: "Tecnología Personalizada",
-      description: "Desarrollamos soluciones adaptadas a tus necesidades, utilizando las tecnologías web más avanzadas, como React, Vue o soluciones simples con HTML.",
+      title: "Gestión de Producto",
+      description: "Llevamos tu idea al mercado, sin rodeos.",
       icon: "bx:bxs-briefcase",
     },
     {
-      title: "Optimización de Rendimiento",
-      description: "Creamos páginas altamente optimizadas para una carga rápida, sin código innecesario, para ofrecer la mejor experiencia de usuario.",
+      title: "Diseño y UX/UI",
+      description: "Diseños sencillos que funcionan.",
+      icon: "bx:bxs-paint",
+    },
+    {
+      title: "Web para tu Negocio",
+      description: "Tu web lista para vender.",
       icon: "bx:bxs-window-alt",
     },
     {
-      title: "Interactividad Inteligente",
-      description: "Añadimos interactividad a tu página solo cuando es necesario, maximizando la eficiencia y la velocidad de carga.",
-      icon: "bx:bxs-data",
+      title: "Tiendas Online",
+      description: "Abre tu tienda y vende ya.",
+      icon: "bx:bxs-cart",
     },
     {
-      title: "Integración Completa",
-      description: "Ofrecemos funcionalidades avanzadas con soporte para TypeScript, CSS, Sass, Tailwind, Markdown y mucho más.",
+      title: "Bots de Telegram",
+      description: "Respuestas automáticas que te ahorran tiempo.",
+      icon: "bx:bxl-telegram",
+    },
+    {
+      title: "Integraciones de IA",
+      description: "Añade IA a tu negocio, sin complicarte.",
       icon: "bx:bxs-bot",
     },
     {
-      title: "SEO Optimizado",
-      description: "Incluimos prácticas de SEO para asegurar la visibilidad de tu sitio: sitemaps, RSS y más para ayudar a mejorar tu posición en buscadores.",
-      icon: "bx:bxs-file-find",
+      title: "Analítica",
+      description: "Mira tus números y decide mejor.",
+      icon: "bx:bxs-bar-chart-alt-2",
     },
     {
-      title: "Soporte Comunitario",
-      description: "Formamos parte de una comunidad de desarrolladores dedicada a innovar y compartir conocimiento.",
-      icon: "bx:bxs-user",
+      title: "Formación Digital",
+      description: "Enseñamos a tu equipo lo básico.",
+      icon: "bx:bxs-graduation",
+    },
+    {
+      title: "Formación en IA",
+      description: "Aprende a usar IA, sin tecnicismos.",
+      icon: "bx:bxs-brain",
+    },
+    {
+      title: "Formación en Cripto",
+      description: "Entiende blockchain y criptomonedas.",
+      icon: "bx:bxl-bitcoin",
     },
   ]
 };
