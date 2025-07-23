@@ -1,6 +1,6 @@
 export const aboutTextsEs = {
-  title: "Acerca de",
-  description: "Somos un equipo pequeño y apasionado.",
-  heading: "Digitalizando al mundo.",
-  paragraph: "¡Somos un equipo multicultural de todo el mundo! Venimos de diversos orígenes, aportando diferentes personalidades, experiencias y habilidades al trabajo. Esto es lo que hace que nuestro equipo sea tan especial."
+  title: "Quiénes somos",
+  description: "Impulsados por la curiosidad, unidos por un propósito.",
+  heading: "Creando soluciones digitales para personas reales.",
+  paragraph: "En CalCorp, combinamos experiencia técnica con una pasión genuina por resolver problemas reales. Nuestro equipo prospera gracias a la colaboración, la creatividad y el compromiso compartido de hacer la tecnología accesible y útil. Cada proyecto es una oportunidad para aprender, crecer y ayudar a nuestros clientes a alcanzar el éxito."
 };
