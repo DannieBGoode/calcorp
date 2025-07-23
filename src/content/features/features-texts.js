@@ -43,14 +43,9 @@ export const featuresTexts = {
       icon: "bx:bxs-graduation",
     },
     {
-      title: "AI Training",
-      description: "Learn AI without the jargon.",
+      title: "AI & Crypto Training",
+      description: "Learn AI and crypto from scratch, without the jargon.",
       icon: "bx:bxs-brain",
-    },
-    {
-      title: "Crypto Training",
-      description: "Understand blockchain and crypto from scratch.",
-      icon: "bx:bxl-bitcoin",
     },
   ]
 };

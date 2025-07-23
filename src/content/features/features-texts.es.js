@@ -43,14 +43,9 @@ export const featuresTexts = {
       icon: "bx:bxs-graduation",
     },
     {
-      title: "Formación en IA",
-      description: "Aprende a usar IA, sin tecnicismos.",
+      title: "Formación en IA y Cripto",
+      description: "Aprende IA y cripto desde cero, sin tecnicismos.",
       icon: "bx:bxs-brain",
-    },
-    {
-      title: "Formación en Cripto",
-      description: "Entiende blockchain y criptomonedas.",
-      icon: "bx:bxl-bitcoin",
     },
   ]
 };
