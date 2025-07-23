@@ -4,7 +4,7 @@ export default {
   contactTitle: "Contacta Calcorp",
   contactDescription: "Som aquí per ajudar. Omple el formulari o envia un correu electrònic o truca per telèfon.",
   address: "Ordino AD300",
-  email: "calcorp.detail660@simplelogin.com",
+  email: "hola@calcorp.io",
   phone: "+376",
   fullNamePlaceholder: "Nom complet",
   fullNameFeedback: "Si us plau, proporciona el teu nom complet.",

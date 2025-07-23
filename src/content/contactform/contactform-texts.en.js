@@ -4,7 +4,7 @@ export default {
   contactTitle: "Contact Astroship",
   contactDescription: "We are here to help. Fill up the form or send email or call phone.",
   address: "Ordino AD300",
-  email: "calcorp.detail660@simplelogin.com",
+  email: "hola@calcorp.io",
   phone: "+376",
   fullNamePlaceholder: "Full Name",
   fullNameFeedback: "Please provide your full name.",
