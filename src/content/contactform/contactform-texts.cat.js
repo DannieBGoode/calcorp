@@ -1,8 +1,8 @@
 export default {
   pageTitle: "Contacta'ns",
-  pageDescription: "Som aquí per ajudar.",
-  contactTitle: "Contacta Calcorp",
-  contactDescription: "Som aquí per ajudar. Omple el formulari o envia un correu electrònic o truca per telèfon.",
+  pageDescription: "En què et podem ajudar?",
+  contactTitle: "Parlem",
+  contactDescription: "Omple el formulari o truca'ns.",
   address: "Ordino AD300",
   email: "hola@calcorp.io",
   phone: "+376",

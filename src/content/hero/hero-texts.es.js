@@ -1,6 +1,6 @@
 export const heroTexts = {
-  heading: "Moderniza tu negocio",
-  paragraph: "Creamos soluciones a medida para digitalizar tu negocio",
-  exploreServices: "Explorar Servicios",
-  contactUs: "Contáctanos"
+  heading: "Pon tu negocio al día",
+  paragraph: "Creamos la web que necesitas para vender más.",
+  exploreServices: "Ver Servicios",
+  contactUs: "Hablemos"
 };

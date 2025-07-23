@@ -1,3 +1,3 @@
 export const logosTexts = {
-  heading: "Treballem amb aquestes tecnologies"
+  heading: "Les tecnologies que fem servir"
 };

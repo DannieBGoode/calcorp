@@ -1,12 +1,12 @@
 export const eorFeatures = {
   title: "Employee of Record in Andorra",
-  description: "Hire talent compliantly with CALCORP as your local employer of record.",
+  description: "Hire in Andorra without opening a company.",
   intro: [
-    "CALCORP acts as the legal employer for your Andorran staff while you manage their day-to-day work. Our team handles employment contracts, payroll and ongoing compliance so you don't need to open a local entity.",
-    "Partnering with us gives you immediate access to the Andorran market with none of the administrative burden of hiring directly."
+    "CALCORP is your legal employer in Andorra. You run the team while we handle contracts, payroll and compliance.",
+    "Work with us and forget the paperwork."
   ],
-  heading: "Benefits of CALCORP as your EOR",
-  paragraph: "Hire professionals in Andorra quickly and compliantly without opening a local entity.",
+  heading: "Why CALCORP",
+  paragraph: "Hire professionals in Andorra quickly and legally without setting up an entity.",
   features: [
     {
       title: "Full Legal Compliance",

@@ -1,8 +1,8 @@
 export default {
   pageTitle: "Contact",
-  pageDescription: "We are here to help.",
-  contactTitle: "Contact Astroship",
-  contactDescription: "We are here to help. Fill up the form or send email or call phone.",
+  pageDescription: "How can we help?",
+  contactTitle: "Talk to CalCorp",
+  contactDescription: "Fill out the form or drop us a line.",
   address: "Ordino AD300",
   email: "hola@calcorp.io",
   phone: "+376",

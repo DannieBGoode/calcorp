@@ -1,6 +1,6 @@
 export const aboutTexts = {
   title: "Who We Are",
-  description: "Driven by curiosity, united by purpose.",
-  heading: "Building digital solutions for real people.",
-  paragraph: "At CalCorp, we blend technical expertise with a genuine passion for solving real-world problems. Our team thrives on collaboration, creativity, and a shared commitment to making technology accessible and impactful. Every project is a chance to learn, grow, and help our clients succeed."
+  description: "Curious minds with a clear purpose.",
+  heading: "We create digital solutions for real people.",
+  paragraph: "At CalCorp we pair experience with a simple approach to solve real problems. We work side by side with you so technology helps instead of hinders. Each project teaches us something new and pushes your business forward."
 };
