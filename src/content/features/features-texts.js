@@ -1,36 +1,56 @@
 export const featuresTexts = {
-  heading: "CALCORP Services",
-  paragraph: "Discover how CALCORP can transform your digital presence with our web solutions.",
+  heading: "What We Do",
+  paragraph: "Straightforward solutions to grow your business.",
   features: [
     {
-      title: "Customized Technology",
-      description: "We develop solutions tailored to your needs, using the most advanced web technologies, such as React, Vue, or simple HTML solutions.",
+      title: "Product Management",
+      description: "From idea to launch, we handle it all.",
       icon: "bx:bxs-briefcase",
     },
     {
-      title: "Performance Optimization",
-      description: "We create highly optimized pages for fast loading, without unnecessary code, to provide the best user experience.",
+      title: "Design & UX/UI",
+      description: "Clean designs your customers will love.",
+      icon: "bx:bxs-paint",
+    },
+    {
+      title: "Business Websites",
+      description: "A site that tells your story and sells.",
       icon: "bx:bxs-window-alt",
     },
     {
-      title: "Smart Interactivity",
-      description: "We add interactivity to your page only when necessary, maximizing efficiency and load speed.",
-      icon: "bx:bxs-data",
+      title: "Online Stores",
+      description: "Open your shop and start selling today.",
+      icon: "bx:bxs-cart",
     },
     {
-      title: "Complete Integration",
-      description: "We offer advanced functionalities with support for TypeScript, CSS, Sass, Tailwind, Markdown, and much more.",
+      title: "Telegram Bots",
+      description: "Bots that answer for you 24/7.",
+      icon: "bx:bxl-telegram",
+    },
+    {
+      title: "AI Integrations",
+      description: "Bring AI into your business with no fuss.",
       icon: "bx:bxs-bot",
     },
     {
-      title: "SEO Optimized",
-      description: "We include SEO practices to ensure your site’s visibility: sitemaps, RSS, and more to help improve your search engine ranking.",
-      icon: "bx:bxs-file-find",
+      title: "Analytics",
+      description: "Know what works and what doesn't.",
+      icon: "bx:bxs-bar-chart-alt-2",
     },
     {
-      title: "Community Support",
-      description: "We are part of a developer community dedicated to innovating and sharing knowledge.",
-      icon: "bx:bxs-user",
+      title: "Digital Training",
+      description: "Teach your team the digital basics.",
+      icon: "bx:bxs-graduation",
+    },
+    {
+      title: "AI Training",
+      description: "Learn AI without the jargon.",
+      icon: "bx:bxs-brain",
+    },
+    {
+      title: "Crypto Training",
+      description: "Understand blockchain and crypto from scratch.",
+      icon: "bx:bxl-bitcoin",
     },
   ]
 };

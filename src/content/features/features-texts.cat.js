@@ -1,36 +1,56 @@
 export const featuresTexts = {
-  heading: "Serveis de CALCORP",
-  paragraph: "Descobreix com CALCORP pot transformar la teva presència digital amb les nostres solucions web.",
+  heading: "Què podem fer per tu?",
+  paragraph: "Solucions clares per fer créixer el teu negoci.",
   features: [
     {
-      title: "Tecnologia Personalitzada",
-      description: "Construïm solucions adaptades a les teves necessitats, utilitzant les tecnologies web més avançades, com React, Vue o simples solucions HTML.",
+      title: "Gestió de Producte",
+      description: "Duem la teva idea al mercat, sense embolics.",
       icon: "bx:bxs-briefcase",
     },
     {
-      title: "Optimització de Rendiment",
-      description: "Creem pàgines altament optimitzades per a una càrrega ràpida, sense codi innecessari, per oferir la millor experiència a l'usuari.",
+      title: "Disseny i UX/UI",
+      description: "Dissenys senzills que funcionen.",
+      icon: "bx:bxs-paint",
+    },
+    {
+      title: "Web per al teu Negoci",
+      description: "El teu web a punt per vendre.",
       icon: "bx:bxs-window-alt",
     },
     {
-      title: "Interactivitat Intel·ligent",
-      description: "Afegim interactivitat a la teva pàgina només quan és necessari, maximitzant l'eficiència i la velocitat de càrrega.",
-      icon: "bx:bxs-data",
+      title: "Botigues Online",
+      description: "Obre la teva botiga i comença a vendre.",
+      icon: "bx:bxs-cart",
     },
     {
-      title: "Integració Completa",
-      description: "Ofereix funcionalitats avançades amb suport per TypeScript, CSS, Sass, Tailwind, Markdown i molt més.",
+      title: "Bots de Telegram",
+      description: "Respostes automàtiques que t'estalvien temps.",
+      icon: "bx:bxl-telegram",
+    },
+    {
+      title: "Integracions d'IA",
+      description: "Afegeix IA al teu negoci sense complicar-te.",
       icon: "bx:bxs-bot",
     },
     {
-      title: "SEO Optimitzat",
-      description: "Incloem pràctiques de SEO per assegurar la visibilitat del teu lloc: sitemaps, RSS, i més per ajudar a la teva posició en cercadors.",
-      icon: "bx:bxs-file-find",
+      title: "Analítica",
+      description: "Coneix els teus números i decideix millor.",
+      icon: "bx:bxs-bar-chart-alt-2",
     },
     {
-      title: "Suport de Comunitat",
-      description: "Formem part d'una comunitat de desenvolupadors que es dediquen a innovar i compartir coneixement.",
-      icon: "bx:bxs-user",
+      title: "Formació Digital",
+      description: "Formem el teu equip en el bàsic.",
+      icon: "bx:bxs-graduation",
+    },
+    {
+      title: "Formació en IA",
+      description: "Aprèn a usar IA, sense tecnicismes.",
+      icon: "bx:bxs-brain",
+    },
+    {
+      title: "Formació en Cripto",
+      description: "Entén la blockchain i les criptomonedes.",
+      icon: "bx:bxl-bitcoin",
     },
   ]
 };
