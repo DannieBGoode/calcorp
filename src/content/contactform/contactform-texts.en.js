@@ -1,7 +1,7 @@
 export default {
   pageTitle: "Contact",
   pageDescription: "How can we help?",
-  contactTitle: "Talk to CalCorp",
+  contactTitle: "Talk to CALCORP",
   contactDescription: "Fill out the form or drop us a line.",
   address: "Ordino AD300",
   email: "hola@calcorp.io",
