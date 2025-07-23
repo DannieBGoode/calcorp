@@ -1,7 +1,7 @@
 export default [
   {
-    title: "",
-    path: "/cat",
+    title: "Inici",
+    path: "",
   },
   {
     title: "EOR",

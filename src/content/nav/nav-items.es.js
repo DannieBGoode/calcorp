@@ -1,14 +1,14 @@
 export default [
   {
-    title: "",
-    path: "/es",
+    title: "Home",
+    path: "",
   },
   {
     title: "EOR",
     path: "/eor",
   },
   {
-    title: "Acerca de",
+    title: "Nosotros",
     path: "/about",
   },
   {
