@@ -20,6 +20,12 @@ function normalizeEnPath(path) {
   return path;
 }
 
+// Helper to normalize any path (removes trailing slash except for root)
+function normalizePath(path) {
+  if (!path || path === "") return "/";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
+
 if (urlPath.startsWith('/es')) {
   basePath = '/es';
   menuitems = esNavItems;
@@ -64,15 +70,19 @@ const languages = [
                   <li>
                     <a
                       href={basePath === "/" ? normalizeEnPath(item.path) : `${basePath}${item.path}`}
-class={`flex lg:px-3 py-2 items-center ${
-  (
-    basePath === "/"
-      ? urlPath === normalizeEnPath(item.path)
-      : (urlPath === basePath + item.path || (item.path === "/" && urlPath === basePath))
-  )
-    ? "font-bold text-black"
-    : "text-gray-600 hover:text-gray-900"
-}`}>
+                      class={`flex lg:px-3 py-2 items-center ${
+                        (
+                          basePath === "/"
+                            ? normalizePath(urlPath) === normalizePath(normalizeEnPath(item.path))
+                            : (
+                                normalizePath(urlPath) === normalizePath(basePath + item.path) ||
+                                (item.path === "/" && normalizePath(urlPath) === normalizePath(basePath))
+                              )
+                        )
+                          ? "font-bold text-black"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
