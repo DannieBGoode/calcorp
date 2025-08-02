@@ -2,17 +2,14 @@
 import { Icon } from "astro-icon/components";
 
 const { lang = "en" } = Astro.props;
-import { featuresTexts as featuresTextsEn } from "../content/features/features-texts.js";
-import { featuresTexts as featuresTextsEs } from "../content/features/features-texts.es.js";
-import { featuresTexts as featuresTextsCat } from "../content/features/features-texts.cat.js";
 
 let featuresTexts;
 if (lang === "es") {
-  featuresTexts = featuresTextsEs;
+  featuresTexts = (await import("../content/features/features-texts.es.js")).featuresTexts;
 } else if (lang === "cat") {
-  featuresTexts = featuresTextsCat;
+  featuresTexts = (await import("../content/features/features-texts.cat.js")).featuresTexts;
 } else {
-  featuresTexts = featuresTextsEn;
+  featuresTexts = (await import("../content/features/features-texts.js")).featuresTexts;
 }
 ---
 

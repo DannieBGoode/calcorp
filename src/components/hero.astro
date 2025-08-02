@@ -5,17 +5,14 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 
 const { lang = "en" } = Astro.props;
-import { heroTexts as heroTextsEn } from "../content/hero/hero-texts.js";
-import { heroTexts as heroTextsEs } from "../content/hero/hero-texts.es.js";
-import { heroTexts as heroTextsCat } from "../content/hero/hero-texts.cat.js";
 
 let heroTexts;
 if (lang === "es") {
-  heroTexts = heroTextsEs;
+  heroTexts = (await import("../content/hero/hero-texts.es.js")).heroTexts;
 } else if (lang === "cat") {
-  heroTexts = heroTextsCat;
+  heroTexts = (await import("../content/hero/hero-texts.cat.js")).heroTexts;
 } else {
-  heroTexts = heroTextsEn;
+  heroTexts = (await import("../content/hero/hero-texts.js")).heroTexts;
 }
 ---
 

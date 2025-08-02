@@ -4,19 +4,15 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-import enTexts from "../content/contactform/contactform-texts.en.js";
-import esTexts from "../content/contactform/contactform-texts.es.js";
-import catTexts from "../content/contactform/contactform-texts.cat.js";
-
 const { lang = "en" } = Astro.props;
 let texts;
 
 if (lang === "es") {
-  texts = esTexts;
+  texts = (await import("../content/contactform/contactform-texts.es.js")).default;
 } else if (lang === "cat") {
-  texts = catTexts;
+  texts = (await import("../content/contactform/contactform-texts.cat.js")).default;
 } else {
-  texts = enTexts;
+  texts = (await import("../content/contactform/contactform-texts.en.js")).default;
 }
 ---
 

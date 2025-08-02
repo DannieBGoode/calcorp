@@ -1,27 +1,24 @@
 ---
 import Button from "./ui/button.astro";
-import enTexts from "../content/contactform/contactform-texts.en.js";
-import esTexts from "../content/contactform/contactform-texts.es.js";
-import catTexts from "../content/contactform/contactform-texts.cat.js";
 
 const { lang } = Astro.props;
 let texts;
 
 if (lang === "es") {
-  texts = esTexts;
+  texts = (await import("../content/contactform/contactform-texts.es.js")).default;
 } else if (lang === "cat") {
-  texts = catTexts;
+  texts = (await import("../content/contactform/contactform-texts.cat.js")).default;
 } else if (lang === "en") {
-  texts = enTexts;
+  texts = (await import("../content/contactform/contactform-texts.en.js")).default;
 } else {
   // Fallback: determine the language from the URL path
   const urlPath = Astro.url.pathname;
   if (urlPath.startsWith('/es')) {
-    texts = esTexts;
+    texts = (await import("../content/contactform/contactform-texts.es.js")).default;
   } else if (urlPath.startsWith('/cat')) {
-    texts = catTexts;
+    texts = (await import("../content/contactform/contactform-texts.cat.js")).default;
   } else {
-    texts = enTexts;
+    texts = (await import("../content/contactform/contactform-texts.en.js")).default;
   }
 }
 ---
