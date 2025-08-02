@@ -8,13 +8,12 @@ import enTexts from "../content/contactform/contactform-texts.en.js";
 import esTexts from "../content/contactform/contactform-texts.es.js";
 import catTexts from "../content/contactform/contactform-texts.cat.js";
 
-// Determine the language from the URL path
-const urlPath = Astro.url.pathname;
+const { lang = "en" } = Astro.props;
 let texts;
 
-if (urlPath.startsWith('/es')) {
+if (lang === "es") {
   texts = esTexts;
-} else if (urlPath.startsWith('/cat')) {
+} else if (lang === "cat") {
   texts = catTexts;
 } else {
   texts = enTexts;
@@ -52,7 +51,7 @@ if (urlPath.startsWith('/es')) {
         </div>
       </div>
       <div>
-        <Contactform />
+        <Contactform lang={lang} />
       </div>
     </div>
   </Container>
