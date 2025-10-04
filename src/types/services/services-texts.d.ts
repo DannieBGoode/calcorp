@@ -1,8 +1,8 @@
-declare module '../../content/features/features-texts.js' {
-  export const featuresTexts: {
+declare module '../../content/services/services-texts.js' {
+  export const servicesTexts: {
     heading: string;
     paragraph: string;
-    features: Array<{
+    services: Array<{
       title: string;
       description: string;
       icon: string;

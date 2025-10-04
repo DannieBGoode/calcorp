@@ -3,28 +3,28 @@ import { Icon } from "astro-icon/components";
 
 const { lang = "en" } = Astro.props;
 
-let featuresTexts;
+let servicesTexts;
 if (lang === "es") {
-  featuresTexts = (await import("../content/features/features-texts.es.js")).featuresTexts;
+  servicesTexts = (await import("../content/services/services-texts.es.js")).servicesTexts;
 } else if (lang === "cat") {
-  featuresTexts = (await import("../content/features/features-texts.cat.js")).featuresTexts;
+  servicesTexts = (await import("../content/services/services-texts.cat.js")).servicesTexts;
 } else {
-  featuresTexts = (await import("../content/features/features-texts.js")).featuresTexts;
+  servicesTexts = (await import("../content/services/services-texts.js")).servicesTexts;
 }
 ---
 
 <div id="services" class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    {featuresTexts.heading}
+    {servicesTexts.heading}
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    {featuresTexts.paragraph}
+    {servicesTexts.paragraph}
   </p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
-    featuresTexts.features.map((item, index) => {
+    servicesTexts.services.map((item, index) => {
       // Define pastel color schemes for different feature categories
       const colorSchemes = [
         { bg: 'bg-pink-100', icon: 'text-pink-600' }, // Product Management

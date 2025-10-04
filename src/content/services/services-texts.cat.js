@@ -1,7 +1,7 @@
-export const featuresTexts = {
+export const servicesTexts = {
   heading: "Què podem fer per tu?",
   paragraph: "Solucions clares per fer créixer el teu negoci.",
-  features: [
+  services: [
     {
       title: "Gestió de Producte",
       description: "Duem la teva idea al mercat, sense embolics.",
