@@ -4,15 +4,15 @@ import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 
-// Determine the language and import the appropriate hero texts
+const { lang = "en" } = Astro.props;
+
 let heroTexts;
-const url = new URL(Astro.request.url);
-if (url.pathname.startsWith('/es')) {
-  heroTexts = await import("../content/hero/hero-texts.es.js").then(module => module.heroTexts);
-} else if (url.pathname.startsWith('/cat')) {
-  heroTexts = await import("../content/hero/hero-texts.cat.js").then(module => module.heroTexts);
+if (lang === "es") {
+  heroTexts = (await import("../content/hero/hero-texts.es.js")).heroTexts;
+} else if (lang === "cat") {
+  heroTexts = (await import("../content/hero/hero-texts.cat.js")).heroTexts;
 } else {
-  heroTexts = await import("../content/hero/hero-texts.js").then(module => module.heroTexts);
+  heroTexts = (await import("../content/hero/hero-texts.js")).heroTexts;
 }
 ---
 
@@ -48,9 +48,15 @@ if (url.pathname.startsWith('/es')) {
         size="lg"
         style="outline"
         rel="noopener"
-        href="/contact"
+        href={
+          lang === "es"
+            ? "/es/contacto"
+            : lang === "cat"
+            ? "/cat/contacte"
+            : "/contact"
+        }
         class="flex gap-1 items-center justify-center">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        <Icon class="text-black w-4 h-4" name="bx:bxs-message" />
          {heroTexts.contactUs}
       </Link>
     </div>

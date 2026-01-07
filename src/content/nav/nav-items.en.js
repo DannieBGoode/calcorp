@@ -1,7 +1,11 @@
 export default [
   {
-    title: "",
-    path: "/",
+    title: "Home",
+    path: "",
+  },
+  {
+    title: "EOR",
+    path: "./eor",
   },
   {
     title: "About",

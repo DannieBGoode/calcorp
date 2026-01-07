@@ -1,7 +1,6 @@
 export const aboutTextsCat = {
-    title: "Sobre nosaltres",
-    description: "Som un equip petit i apassionat.",
-    heading: "Digitalitzant el món.",
-    paragraph: "Som un equip multicultural d'arreu del món! Venim de diversos orígens, aportant diferents personalitats, experiències i habilitats a la feina. Això és el que fa que el nostre equip sigui tan especial."
+    title: "Qui som",
+    description: "Curiosos amb un propòsit clar.",
+    heading: "Creem solucions digitals per a persones de veritat.",
+    paragraph: "A CALCORP combinem experiència i proximitat per resoldre els teus problemes. Treballem al teu costat perquè la tecnologia et faciliti la vida. Cada projecte ens ensenya i fa créixer el teu negoci."
   };
-  

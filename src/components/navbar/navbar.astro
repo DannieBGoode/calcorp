@@ -12,6 +12,20 @@ const urlPath = Astro.url.pathname;
 let basePath = '/';
 let menuitems = enNavItems;
 
+// Helper to normalize English paths
+function normalizeEnPath(path) {
+  if (!path || path === "" || path === "/") return "/";
+  if (path.startsWith("./")) return "/" + path.slice(2);
+  if (!path.startsWith("/")) return "/" + path;
+  return path;
+}
+
+// Helper to normalize any path (removes trailing slash except for root)
+function normalizePath(path) {
+  if (!path || path === "") return "/";
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
+
 if (urlPath.startsWith('/es')) {
   basePath = '/es';
   menuitems = esNavItems;
@@ -33,8 +47,7 @@ const languages = [
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href={basePath} class="text-lg"
           ><span class="font-bold text-slate-800">CAL</span><span
-            class="text-slate-500">CORP</span
-          >
+            class="text-slate-500">CORP</span>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -56,8 +69,20 @@ const languages = [
                 {!item.children && (
                   <li>
                     <a
-                      href={`${basePath}${item.path}`}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                      href={basePath === "/" ? normalizeEnPath(item.path) : `${basePath}${item.path}`}
+                      class={`flex lg:px-3 py-2 items-center ${
+                        (
+                          basePath === "/"
+                            ? normalizePath(urlPath) === normalizePath(normalizeEnPath(item.path))
+                            : (
+                                normalizePath(urlPath) === normalizePath(basePath + item.path) ||
+                                (item.path === "/" && normalizePath(urlPath) === normalizePath(basePath))
+                              )
+                        )
+                          ? "font-bold text-black"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">

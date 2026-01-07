@@ -4,20 +4,15 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-import enTexts from "../content/contactform/contactform-texts.en.js";
-import esTexts from "../content/contactform/contactform-texts.es.js";
-import catTexts from "../content/contactform/contactform-texts.cat.js";
-
-// Determine the language from the URL path
-const urlPath = Astro.url.pathname;
+const { lang = "en" } = Astro.props;
 let texts;
 
-if (urlPath.startsWith('/es')) {
-  texts = esTexts;
-} else if (urlPath.startsWith('/cat')) {
-  texts = catTexts;
+if (lang === "es") {
+  texts = (await import("../content/contactform/contactform-texts.es.js")).default;
+} else if (lang === "cat") {
+  texts = (await import("../content/contactform/contactform-texts.cat.js")).default;
 } else {
-  texts = enTexts;
+  texts = (await import("../content/contactform/contactform-texts.en.js")).default;
 }
 ---
 
@@ -43,14 +38,16 @@ if (urlPath.startsWith('/es')) {
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
             <a href={`mailto:${texts.email}`}>{texts.email}</a>
           </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
-            <a href={`tel:${texts.phone}`}>{texts.phone}</a>
-          </div>
+          {texts.phone && texts.phone.trim() !== "" && (
+            <div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+              <a href={`tel:${texts.phone}`}>{texts.phone}</a>
+            </div>
+          )}
         </div>
       </div>
       <div>
-        <Contactform />
+        <Contactform lang={lang} />
       </div>
     </div>
   </Container>

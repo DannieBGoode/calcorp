@@ -1,6 +1,6 @@
 export const aboutTexts = {
-  title: "About",
-  description: "We are a small passionate team.",
-  heading: "Empowering the world with Astro.",
-  paragraph: "We're a multi-cultural team from around the world! We come from diverse backgrounds, bringing different personalities, experiences and skills to the job. This is what makes our team so special."
+  title: "Who We Are",
+  description: "Curious minds with a clear purpose.",
+  heading: "We create digital solutions for real people.",
+  paragraph: "At CALCORP we pair experience with a simple approach to solve real problems. We work side by side with you so technology helps instead of hinders. Each project teaches us something new and pushes your business forward."
 };

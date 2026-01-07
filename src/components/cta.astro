@@ -1,17 +1,27 @@
 ---
 import Link from "./ui/link.astro";
+
+const { lang = "en" } = Astro.props;
+
+let ctaTexts;
+if (lang === "es") {
+  ctaTexts = (await import("../content/cta-texts.es.js")).ctaTexts;
+} else if (lang === "cat") {
+  ctaTexts = (await import("../content/cta-texts.cat.js")).ctaTexts;
+} else {
+  ctaTexts = (await import("../content/cta-texts.js")).ctaTexts;
+}
 ---
 
 <div
   class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
   <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    Build faster websites.
+    {ctaTexts.title}
   </h2>
   <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    Pull content from anywhere and serve it fast with Astro's next-gen island
-    architecture.
+    {ctaTexts.description}
   </p>
   <div class="flex mt-5">
-    <Link href="/contact" style="inverted">Contact Us</Link>
+    <Link href="/contact" style="inverted">{ctaTexts.buttonText}</Link>
   </div>
 </div>

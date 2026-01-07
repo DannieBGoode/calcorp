@@ -1,7 +1,6 @@
 export const heroTexts = {
-  heading: "Innovació Digital a la Teva Mesura",
-  paragraph: "Creem solucions web a mida per impulsar el teu negoci en línia.",
-  exploreServices: "Descobreix els nostres serveis",
-  exploreServices: "Explora Serveis",
-  contactUs: "Contacta'ns"
+  heading: "Actualitza el teu negoci",
+  paragraph: "Fem la web que et farà vendre més.",
+  exploreServices: "Mira els Serveis",
+  contactUs: "Parlem"
 };
