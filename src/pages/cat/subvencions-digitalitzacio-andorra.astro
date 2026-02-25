@@ -4,117 +4,85 @@ import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
 
 const content = {
   eyebrow: "Subvencions a Andorra",
-  title: "Subvencions per a digitalització a Andorra (Programa PDE)",
+  title: "PDE Andorra: diners reals per digitalitzar l'empresa",
   intro:
-    "Resum pràctic del programa PDE per a empreses d'Andorra, amb imports orientatius per mida d'empresa i solucions digitals destacades.",
+    "Curt i clar: aquí tens què et poden subvencionar i què pot executar CALCORP. Sense fum.",
   officialSource: {
-    title: "Referència oficial (prioritat absoluta)",
+    title: "Primer, la font oficial",
     description:
-      "El web oficial de Govern / Andorra Digital és l'única font amb validesa legal per a requisits, terminis, despeses subvencionables, imports i condicions de concessió.",
-    cta: "Consultar la pàgina oficial del PDE",
+      "Nosaltres resumim. La veritat legal i actualitzada és a Andorra Digital / Govern.",
+    cta: "Anar a la pàgina oficial del PDE",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  companyBudgetTitle: "Partides orientatives per mida d'empresa",
-  companyBudgetIntro:
-    "Imports publicats com a referència al PDE. Cal validar sempre la convocatòria oficial vigent.",
+  companyBudgetTitle: "Partides per mida d'empresa",
+  companyBudgetIntro: "De menor a major mida. Confirma sempre imports i condicions a la convocatòria vigent.",
   companyBudgets: [
-    { name: "Gran empresa", workers: "Més de 100 treballadors", amount: "3.000 €" },
-    { name: "Mitjana empresa", workers: "26 a 100 treballadors", amount: "4.000 €" },
-    { name: "Petita empresa", workers: "6 a 25 treballadors", amount: "5.500 €" },
-    { name: "Microempresa", workers: "1 a 5 treballadors", amount: "6.000 €" },
+    { icon: "👤", name: "Microempresa", workers: "1 a 5 treballadors", amount: "6.000 €" },
+    { icon: "👥", name: "Petita empresa", workers: "6 a 25 treballadors", amount: "5.500 €" },
+    { icon: "🏢", name: "Mitjana empresa", workers: "26 a 100 treballadors", amount: "4.000 €" },
+    { icon: "🏭", name: "Gran empresa", workers: "Més de 100 treballadors", amount: "3.000 €" },
   ],
-  featuredSolutionsTitle: "Solucions destacades i import de subvenció",
-  featuredSolutionsIntro:
-    "Aquestes són les línies destacades segons la informació pública del PDE. CALCORP ofereix aquestes 4 partides.",
-  featuresLabel: "Funcions i característiques",
-  benefitsLabel: "Beneficis",
-  calcorpOfferBadge: "Solució oferta per CALCORP",
+  featuredSolutionsTitle: "El que fa CALCORP (4 partides)",
+  featuredSolutionsIntro: "Això és el que implementem perquè la subvenció realment et doni resultat.",
+  calcorpOfferBadge: "CALCORP ho implementa",
   featuredSolutions: [
     {
+      icon: "🌐",
       title: "Desenvolupament de pàgina web",
       amount: "1.500 €",
-      subsidyRule:
-        "Import màxim subvencionable: fins al 65% del cost real d'implementació, sense superar l'import màxim establert per a la solució.",
-      summary:
-        "Disposar d'una web professional per mostrar catàleg, serveis i contacte i, si escau, vendre a distància.",
+      subsidyRule: "Subvenció màxima: fins al 65% del cost real (amb topall per solució).",
+      summary: "Una web que treballa per tu: catàleg, contacte i venda online si escau.",
       features: [
-        "Disseny web professional adaptat a escriptori i mòbil.",
-        "Gestor de continguts per modificar la web de forma autònoma.",
-        "Reserva de domini.",
-        "Hosting necessari per al funcionament del lloc.",
-      ],
-      benefits: [
-        "Més visibilitat en línia.",
-        "Més oportunitats de venda.",
-        "Millora de reputació i credibilitat.",
+        "Disseny professional en mòbil i escriptori.",
+        "Panell per editar continguts de forma autònoma.",
+        "Domini i hosting preparats.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "📈",
       title: "Posicionament web (SEO i SEM)",
       amount: "500 €",
-      subsidyRule:
-        "Import màxim subvencionable: fins al 65% del cost real d'implementació, sense superar l'import màxim establert per a la solució.",
-      summary:
-        "Integració d'accions SEO/SEM per augmentar la visibilitat digital a web, xarxes socials i canals de màrqueting.",
+      subsidyRule: "Subvenció màxima: fins al 65% del cost real (amb topall per solució).",
+      summary: "No n'hi ha prou amb tenir web. Cal aparèixer quan et busquen.",
       features: [
-        "On-page SEO: contingut, títols, metadescripcions i estructura.",
-        "Off-page SEO: enllaços, senyals socials i mencions.",
-        "SEO tècnic: velocitat, mobile friendliness i dades estructurades.",
-        "Recerca de paraules clau i monitoratge de rendiment.",
-      ],
-      benefits: [
-        "Més trànsit qualificat.",
-        "Més abast de públic objectiu.",
-        "Millora d'oportunitats comercials.",
+        "SEO on-page i tècnic.",
+        "SEO off-page i senyals de marca.",
+        "Keywords + mesura per millorar resultats.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🎓",
       title: "Formacions en digitalització",
       amount: "1.500 €",
-      subsidyRule:
-        "Import màxim subvencionable: fins al 75% del cost real d'implementació, sense superar l'import màxim establert per a la solució.",
-      summary:
-        "Formació dels empleats per fer servir noves eines i millorar la inclusió digital amb un ús segur i eficient de la tecnologia.",
+      subsidyRule: "Subvenció màxima: fins al 75% del cost real (amb topall per solució).",
+      summary: "Eines noves + equip sense formació = diners perduts. Aquí ho evitem.",
       features: [
-        "Habilitats digitals bàsiques i ofimàtica.",
-        "Ús bàsic/avançat d'eines desplegades (ERP/CRM).",
-        "Formacions i avaluacions per a certificacions.",
-        "Ciberseguretat, tecnologies emergents i automatització.",
-      ],
-      benefits: [
-        "Més eficiència operativa.",
-        "Cultura d'aprenentatge continu.",
-        "Millor presa de decisions.",
+        "Formació pràctica en eines clau.",
+        "Ús real d'ERP/CRM en l'operativa.",
+        "Bones pràctiques de ciberseguretat.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🤖",
       title: "Intel·ligència artificial",
       amount: "3.000 €",
-      subsidyRule:
-        "Import màxim subvencionable: fins al 75% del cost real d'implementació, sense superar l'import màxim establert per a la solució.",
-      summary:
-        "Optimització de processos, anàlisi de dades i suport a la presa de decisions mitjançant automatització i tecnologia intel·ligent.",
+      subsidyRule: "Subvenció màxima: fins al 75% del cost real (amb topall per solució).",
+      summary: "Automatitza tasques, guanya temps i decideix millor amb dades.",
       features: [
-        "Automatització de tasques repetitives amb bots i algoritmes.",
-        "Anàlisi de dades en temps real per prediccions i insights.",
-        "Personalització de serveis amb recomanacions i assistents.",
-        "Integració amb altres sistemes i escalabilitat.",
-      ],
-      benefits: [
-        "Reducció de costos i temps operatius.",
-        "Més productivitat i menys errors humans.",
-        "Escalabilitat sense grans inversions addicionals.",
+        "Automatització de tasques repetitives.",
+        "Anàlisi de dades per decidir més ràpid.",
+        "Integració amb els sistemes actuals.",
       ],
       offeredByCalcorp: true,
     },
   ],
   legalNotice: {
-    title: "Aclariment legal important",
+    title: "Avís legal important",
     body:
-      "Aquesta pàgina és informativa. La veritat absoluta i les condicions legalment vinculants són únicament les publicades al web oficial d'Andorra Digital / Govern.",
+      "Aquesta pàgina és informativa. La informació legalment vinculant és únicament la publicada al web oficial d'Andorra Digital / Govern.",
   },
   references: [
     {

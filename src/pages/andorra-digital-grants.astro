@@ -4,117 +4,85 @@ import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
 
 const content = {
   eyebrow: "Andorra grants",
-  title: "Digitalization grants in Andorra (PDE Program)",
+  title: "PDE Andorra: real money to digitize your business",
   intro:
-    "Practical overview of the PDE program for Andorran businesses, with indicative company-size budget tiers and highlighted digital solutions.",
+    "Short and sharp: what can be subsidized and what CALCORP can execute for you.",
   officialSource: {
-    title: "Official reference (absolute priority)",
+    title: "Official source first",
     description:
-      "The official Government / Andorra Digital website is the only legally valid source for requirements, deadlines, eligible costs, grant amounts, and award conditions.",
-    cta: "Check the official PDE page",
+      "We summarize it. The legal and up-to-date truth is on Andorra Digital / Government.",
+    cta: "Go to the official PDE page",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  companyBudgetTitle: "Indicative grant tiers by company size",
-  companyBudgetIntro:
-    "These amounts are shown as reference under PDE. Always validate against the current official call.",
+  companyBudgetTitle: "Grant tiers by company size",
+  companyBudgetIntro: "Ordered from smallest to largest. Always validate amounts and conditions in the active call.",
   companyBudgets: [
-    { name: "Large company", workers: "More than 100 employees", amount: "€3,000" },
-    { name: "Medium company", workers: "26 to 100 employees", amount: "€4,000" },
-    { name: "Small company", workers: "6 to 25 employees", amount: "€5,500" },
-    { name: "Micro business", workers: "1 to 5 employees", amount: "€6,000" },
+    { icon: "👤", name: "Micro business", workers: "1 to 5 employees", amount: "€6,000" },
+    { icon: "👥", name: "Small company", workers: "6 to 25 employees", amount: "€5,500" },
+    { icon: "🏢", name: "Medium company", workers: "26 to 100 employees", amount: "€4,000" },
+    { icon: "🏭", name: "Large company", workers: "More than 100 employees", amount: "€3,000" },
   ],
-  featuredSolutionsTitle: "Highlighted solutions and subsidy amounts",
-  featuredSolutionsIntro:
-    "These highlighted lines are based on publicly available PDE information. CALCORP offers these 4 lines.",
-  featuresLabel: "Functions and characteristics",
-  benefitsLabel: "Benefits",
-  calcorpOfferBadge: "Solution offered by CALCORP",
+  featuredSolutionsTitle: "What CALCORP delivers (4 lines)",
+  featuredSolutionsIntro: "These are the four lines we implement to turn subsidy into outcomes.",
+  calcorpOfferBadge: "Implemented by CALCORP",
   featuredSolutions: [
     {
+      icon: "🌐",
       title: "Website development",
       amount: "€1,500",
-      subsidyRule:
-        "Maximum subsidy: up to 65% of real implementation cost, without exceeding the cap defined for this solution.",
-      summary:
-        "Build a professional website to showcase products/services and, where applicable, support remote sales.",
+      subsidyRule: "Maximum subsidy: up to 65% of real cost (with a cap per solution).",
+      summary: "A website that works for you: catalog, contact and online sales when needed.",
       features: [
-        "Professional web design for desktop and mobile.",
-        "Content manager for autonomous edits.",
-        "Domain reservation.",
-        "Hosting for site operation.",
-      ],
-      benefits: [
-        "Greater online visibility.",
-        "More sales opportunities.",
-        "Stronger reputation and credibility.",
+        "Professional design for mobile and desktop.",
+        "Easy content editing panel.",
+        "Domain and hosting setup.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "📈",
       title: "Web positioning (SEO & SEM)",
       amount: "€500",
-      subsidyRule:
-        "Maximum subsidy: up to 65% of real implementation cost, without exceeding the cap defined for this solution.",
-      summary:
-        "Apply SEO/SEM actions to improve discoverability across website, social channels, and digital marketing.",
+      subsidyRule: "Maximum subsidy: up to 65% of real cost (with a cap per solution).",
+      summary: "A website is not enough. You need to be found.",
       features: [
-        "On-page SEO for content, titles, meta descriptions, and structure.",
-        "Off-page SEO with links, social signals, and mentions.",
-        "Technical SEO: performance, mobile friendliness, structured data.",
-        "Keyword research and performance monitoring.",
-      ],
-      benefits: [
-        "More qualified traffic.",
-        "Wider target audience reach.",
-        "Improved commercial opportunities.",
+        "On-page and technical SEO.",
+        "Off-page SEO and brand signals.",
+        "Keywords + measurement for growth.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🎓",
       title: "Digitalization training",
       amount: "€1,500",
-      subsidyRule:
-        "Maximum subsidy: up to 75% of real implementation cost, without exceeding the cap defined for this solution.",
-      summary:
-        "Train employees to adopt new tools and strengthen digital inclusion with secure, efficient technology usage.",
+      subsidyRule: "Maximum subsidy: up to 75% of real cost (with a cap per solution).",
+      summary: "New tools without trained people? Waste. We fix that.",
       features: [
-        "Basic digital skills and office tools.",
-        "Basic/advanced usage of deployed tools (ERP/CRM).",
-        "Training and assessments for certifications.",
-        "Cybersecurity, emerging technologies, and automation.",
-      ],
-      benefits: [
-        "Higher operational efficiency.",
-        "Continuous learning culture.",
-        "Better decision-making.",
+        "Hands-on training on key tools.",
+        "Real ERP/CRM adoption.",
+        "Cybersecurity best practices.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🤖",
       title: "Artificial intelligence",
       amount: "€3,000",
-      subsidyRule:
-        "Maximum subsidy: up to 75% of real implementation cost, without exceeding the cap defined for this solution.",
-      summary:
-        "Optimize processes, analyze data, and support decision-making through automation and intelligent technology.",
+      subsidyRule: "Maximum subsidy: up to 75% of real cost (with a cap per solution).",
+      summary: "Automate repetitive work, save time, and decide faster with data.",
       features: [
-        "Automation of repetitive tasks with bots and AI algorithms.",
-        "Real-time data processing for predictions and insights.",
-        "Service personalization with recommendations and assistants.",
-        "Integration with other systems and scalability.",
-      ],
-      benefits: [
-        "Lower operational costs and time.",
-        "Higher productivity with fewer human errors.",
-        "Scalability without major additional investment.",
+        "Task automation.",
+        "Data analysis for smarter decisions.",
+        "Integration with your existing stack.",
       ],
       offeredByCalcorp: true,
     },
   ],
   legalNotice: {
-    title: "Important legal clarification",
+    title: "Important legal note",
     body:
-      "This page is informational. The absolute truth and legally binding conditions are only those published on the official Andorra Digital / Government website.",
+      "This page is informational. Legally binding information is only what appears on the official Andorra Digital / Government website.",
   },
   references: [
     {

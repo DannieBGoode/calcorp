@@ -4,117 +4,85 @@ import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
 
 const content = {
   eyebrow: "Subvenciones en Andorra",
-  title: "Subvenciones para digitalización en Andorra (Programa PDE)",
+  title: "PDE Andorra: dinero real para digitalizar tu empresa",
   intro:
-    "Resumen práctico del programa PDE para empresas de Andorra, con importes orientativos por tamaño de empresa y soluciones digitales destacadas.",
+    "Corto y claro: aquí tienes lo que te pueden subvencionar y qué puede ejecutar CALCORP. Sin humo.",
   officialSource: {
-    title: "Referencia oficial (prioridad absoluta)",
+    title: "Primero, la fuente oficial",
     description:
-      "La web oficial de Gobierno / Andorra Digital es la única fuente con validez legal para requisitos, plazos, gastos subvencionables, importes y condiciones de concesión.",
-    cta: "Consultar la página oficial del PDE",
+      "Nosotros resumimos. La verdad legal y actualizada está en Andorra Digital / Gobierno.",
+    cta: "Ir a la página oficial del PDE",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  companyBudgetTitle: "Partidas orientativas por tamaño de empresa",
-  companyBudgetIntro:
-    "Importes publicados como referencia en el PDE. Debes validar siempre la convocatoria oficial vigente.",
+  companyBudgetTitle: "Partidas por tamaño de empresa",
+  companyBudgetIntro: "De menor a mayor tamaño. Confirma siempre importes y condiciones en la convocatoria vigente.",
   companyBudgets: [
-    { name: "Gran empresa", workers: "Más de 100 trabajadores", amount: "3.000 €" },
-    { name: "Mediana empresa", workers: "26 a 100 trabajadores", amount: "4.000 €" },
-    { name: "Pequeña empresa", workers: "6 a 25 trabajadores", amount: "5.500 €" },
-    { name: "Microempresa", workers: "1 a 5 trabajadores", amount: "6.000 €" },
+    { icon: "👤", name: "Microempresa", workers: "1 a 5 trabajadores", amount: "6.000 €" },
+    { icon: "👥", name: "Pequeña empresa", workers: "6 a 25 trabajadores", amount: "5.500 €" },
+    { icon: "🏢", name: "Mediana empresa", workers: "26 a 100 trabajadores", amount: "4.000 €" },
+    { icon: "🏭", name: "Gran empresa", workers: "Más de 100 trabajadores", amount: "3.000 €" },
   ],
-  featuredSolutionsTitle: "Soluciones destacadas y su importe de subvención",
-  featuredSolutionsIntro:
-    "Estas son las líneas destacadas según la información pública del PDE. CALCORP ofrece estas 4 partidas.",
-  featuresLabel: "Funciones y características",
-  benefitsLabel: "Beneficios",
-  calcorpOfferBadge: "Solución ofrecida por CALCORP",
+  featuredSolutionsTitle: "Lo que hace CALCORP (4 partidas)",
+  featuredSolutionsIntro: "Esto es lo que ejecutamos para que aproveches la subvención de verdad.",
+  calcorpOfferBadge: "CALCORP lo implementa",
   featuredSolutions: [
     {
+      icon: "🌐",
       title: "Desarrollo de página web",
       amount: "1.500 €",
-      subsidyRule:
-        "Importe máximo subvencionable: hasta el 65% del coste real de implementación, sin superar el máximo de la solución.",
-      summary:
-        "Disponer de una web profesional para mostrar catálogo, servicios e información de contacto y, si aplica, vender a distancia.",
+      subsidyRule: "Subvención máxima: hasta el 65% del coste real (con tope por solución).",
+      summary: "Tu web vende por ti: catálogo, contacto y opción de venta online si aplica.",
       features: [
-        "Diseño web profesional adaptado a escritorio y móvil.",
-        "Gestor de contenidos para editar la web de forma autónoma.",
-        "Reserva de dominio.",
-        "Hosting para el funcionamiento del sitio.",
-      ],
-      benefits: [
-        "Mayor visibilidad online.",
-        "Más oportunidades de venta.",
-        "Mejora de reputación y credibilidad.",
+        "Diseño profesional en móvil y escritorio.",
+        "Panel para editar contenidos sin depender de nadie.",
+        "Dominio y hosting listos.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "📈",
       title: "Posicionamiento web (SEO y SEM)",
       amount: "500 €",
-      subsidyRule:
-        "Importe máximo subvencionable: hasta el 65% del coste real de implementación, sin superar el máximo de la solución.",
-      summary:
-        "Integración de acciones SEO/SEM para aumentar la visibilidad digital en web, redes sociales y canales de marketing.",
+      subsidyRule: "Subvención máxima: hasta el 65% del coste real (con tope por solución).",
+      summary: "No basta con tener web. Hay que aparecer donde te buscan.",
       features: [
-        "On-page SEO: contenidos, títulos, metadescripciones y estructura.",
-        "Off-page SEO: enlaces, señales sociales y menciones.",
-        "SEO técnico: velocidad, mobile friendliness y datos estructurados.",
-        "Investigación de palabras clave y monitorización de rendimiento.",
-      ],
-      benefits: [
-        "Más tráfico cualificado.",
-        "Mayor alcance de público objetivo.",
-        "Mejora de oportunidades comerciales.",
+        "SEO on-page y técnico.",
+        "SEO off-page y señales de marca.",
+        "Keywords + medición para mejorar resultados.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🎓",
       title: "Formaciones en digitalización",
       amount: "1.500 €",
-      subsidyRule:
-        "Importe máximo subvencionable: hasta el 75% del coste real de implementación, sin superar el máximo de la solución.",
-      summary:
-        "Formación de empleados para usar nuevas herramientas y mejorar la inclusión digital con uso seguro y eficiente de la tecnología.",
+      subsidyRule: "Subvención máxima: hasta el 75% del coste real (con tope por solución).",
+      summary: "Herramientas nuevas + equipo sin formación = dinero tirado. Aquí lo evitamos.",
       features: [
-        "Competencias digitales básicas y ofimática.",
-        "Uso básico/avanzado de herramientas desplegadas (ERP/CRM).",
-        "Formaciones y evaluaciones para certificaciones.",
-        "Ciberseguridad, tecnologías emergentes y automatización.",
-      ],
-      benefits: [
-        "Mayor eficiencia operativa.",
-        "Cultura de aprendizaje continuo.",
-        "Mejor toma de decisiones.",
+        "Formación práctica en herramientas clave.",
+        "Uso real de ERP/CRM en tu operativa.",
+        "Buenas prácticas de ciberseguridad.",
       ],
       offeredByCalcorp: true,
     },
     {
+      icon: "🤖",
       title: "Inteligencia artificial",
       amount: "3.000 €",
-      subsidyRule:
-        "Importe máximo subvencionable: hasta el 75% del coste real de implementación, sin superar el máximo de la solución.",
-      summary:
-        "Optimización de procesos, análisis de datos y apoyo a la toma de decisiones mediante automatización y tecnología inteligente.",
+      subsidyRule: "Subvención máxima: hasta el 75% del coste real (con tope por solución).",
+      summary: "Automatiza tareas, gana tiempo y decide mejor con datos.",
       features: [
-        "Automatización de tareas repetitivas con bots y algoritmos.",
-        "Análisis de datos en tiempo real para predicciones e insights.",
-        "Personalización de servicios con recomendaciones y asistentes.",
-        "Integración con otros sistemas y escalabilidad.",
-      ],
-      benefits: [
-        "Reducción de costes y tiempos operativos.",
-        "Mayor productividad y menos errores humanos.",
-        "Escalabilidad sin grandes inversiones adicionales.",
+        "Automatización de tareas repetitivas.",
+        "Análisis de datos para decisiones rápidas.",
+        "Integración con tus sistemas actuales.",
       ],
       offeredByCalcorp: true,
     },
   ],
   legalNotice: {
-    title: "Aclaración legal importante",
+    title: "Aviso legal importante",
     body:
-      "Esta página es informativa. La verdad absoluta y las condiciones legalmente vinculantes son únicamente las publicadas en la web oficial de Andorra Digital / Gobierno.",
+      "Esta página es informativa. La información legalmente vinculante es únicamente la publicada en la web oficial de Andorra Digital / Gobierno.",
   },
   references: [
     {
