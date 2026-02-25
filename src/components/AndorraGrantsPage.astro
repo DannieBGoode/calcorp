@@ -76,7 +76,7 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
                 </div>
               </td>
               <td class="px-3 py-3 text-right">{formatEur(service.baseCost)}</td>
-              <td class={`px-3 py-3 text-right subsidy-cell ${service.subsidyPercent === 0.75 ? "text-emerald-700" : ""}` }>{formatEur(0)}</td>
+              <td class="px-3 py-3 text-right subsidy-cell text-slate-900" data-is-75={service.subsidyPercent === 0.75 ? "true" : "false"}>{formatEur(0)}</td>
               <td class="px-3 py-3 text-right final-cell">{formatEur(0)}</td>
             </tr>
           ))}
@@ -155,11 +155,17 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
         const finalCost = Math.max(cost - subsidy, 0);
         subsidyCell.textContent = formatEur(subsidy);
         finalCell.textContent = formatEur(finalCost);
+        if (row.dataset.is75 === "true") {
+          subsidyCell.classList.add("text-emerald-700", "font-bold");
+          subsidyCell.classList.remove("text-slate-900");
+        }
         totalCost += cost;
         totalSubsidy += subsidy;
       } else {
         subsidyCell.textContent = formatEur(0);
         finalCell.textContent = formatEur(0);
+        subsidyCell.classList.remove("text-emerald-700", "font-bold");
+        subsidyCell.classList.add("text-slate-900");
       }
     });
 
