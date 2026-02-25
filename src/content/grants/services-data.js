@@ -246,6 +246,7 @@ export const suggestedPacks = {
     "formacions"
   ],
   "ecommerce": [
+    "web",
     "botiga-online",
     "seo-sem",
     "atencio-client",
