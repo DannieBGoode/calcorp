@@ -1,246 +1,260 @@
 export const grantsServices = [
   {
-    id: "digitalitzacio-processos",
-    icon: "uil:process",
-    name: {
-      es: "Digitalización de procesos",
-      cat: "Digitalització de processos",
-      en: "Process digitization",
+    "id": "botiga-online",
+    "icon": "uil:shopping-cart-alt",
+    "name": {
+      "es": "Desarrollo de tienda online",
+      "cat": "Desenvolupament de botiga online",
+      "en": "Online store development"
     },
-    description: {
-      es: "Automatiza tareas internas para ahorrar tiempo y reducir errores.",
-      cat: "Automatitza tasques internes per estalviar temps i reduir errors.",
-      en: "Automate internal tasks to save time and reduce errors.",
+    "description": {
+      "es": "Vende online con catálogo, pagos y logística integrada.",
+      "cat": "Ven online amb catàleg, pagaments i logística integrada.",
+      "en": "Sell online with catalog, payments and integrated logistics."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1200,
-    baseCost: 2200,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 2000,
+    "baseCost": 3500
   },
   {
-    id: "atencio-client",
-    icon: "uil:headphones-alt",
-    name: {
-      es: "Atención al cliente",
-      cat: "Atenció al client",
-      en: "Customer service",
+    "id": "seo-sem",
+    "icon": "uil:search",
+    "name": {
+      "es": "Posicionamiento web (SEO y SEM)",
+      "cat": "Posicionament web (SEO i SEM)",
+      "en": "Web positioning (SEO & SEM)"
     },
-    description: {
-      es: "Canales digitales para responder más rápido y mejor a tus clientes.",
-      cat: "Canals digitals per respondre més ràpid i millor als teus clients.",
-      en: "Digital channels to reply faster and better to your customers.",
+    "description": {
+      "es": "Haz que te encuentren primero con estrategia de visibilidad digital.",
+      "cat": "Fes que et trobin primer amb estratègia de visibilitat digital.",
+      "en": "Get found first with a digital visibility strategy."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1000,
-    baseCost: 1800,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 500,
+    "baseCost": 1200
   },
   {
-    id: "reserva-online",
-    icon: "uil:calendar-alt",
-    name: {
-      es: "Reserva online",
-      cat: "Reserva online",
-      en: "Online booking",
+    "id": "reserva-online",
+    "icon": "uil:calendar-alt",
+    "name": {
+      "es": "Reserva online",
+      "cat": "Reserva online",
+      "en": "Online booking"
     },
-    description: {
-      es: "Permite reservas 24/7 sin depender del horario del negocio.",
-      cat: "Permet reserves 24/7 sense dependre de l'horari del negoci.",
-      en: "Let clients book 24/7 without depending on opening hours.",
+    "description": {
+      "es": "Permite reservas 24/7 sin depender del horario del negocio.",
+      "cat": "Permet reserves 24/7 sense dependre de l'horari del negoci.",
+      "en": "Let clients book 24/7 without depending on opening hours."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1000,
-    baseCost: 1700,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1000,
+    "baseCost": 1700
   },
   {
-    id: "ingressos-preus",
-    icon: "uil:chart-line",
-    name: {
-      es: "Gestión de ingresos y análisis de precios",
-      cat: "Gestió d’ingressos i anàlisi de preus",
-      en: "Revenue management & price analytics",
+    "id": "ia",
+    "icon": "uil:robot",
+    "name": {
+      "es": "Inteligencia artificial",
+      "cat": "Intel·ligència artificial",
+      "en": "Artificial intelligence"
     },
-    description: {
-      es: "Ajusta precios con datos para mejorar margen y ocupación.",
-      cat: "Ajusta preus amb dades per millorar marge i ocupació.",
-      en: "Adjust pricing with data to improve margin and occupancy.",
+    "description": {
+      "es": "Automatiza y predice para ahorrar horas y aumentar productividad.",
+      "cat": "Automatitza i prediu per estalviar hores i augmentar productivitat.",
+      "en": "Automate and predict to save hours and boost productivity."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1500,
-    baseCost: 2600,
+    "subsidyPercent": 0.75,
+    "maxSubsidy": 3000,
+    "baseCost": 4200
   },
   {
-    id: "restaurants",
-    icon: "uil:utensils",
-    name: {
-      es: "Digitalización de restaurantes",
-      cat: "Digitalització de restaurants",
-      en: "Restaurant digitization",
+    "id": "bi",
+    "icon": "uil:chart-pie",
+    "name": {
+      "es": "Analítica y explotación de datos (BI)",
+      "cat": "Analítica i explotació de dades (BI)",
+      "en": "Analytics & business intelligence (BI)"
     },
-    description: {
-      es: "Digitaliza pedidos, sala y gestión para operar con menos fricción.",
-      cat: "Digitalitza comandes, sala i gestió per operar amb menys fricció.",
-      en: "Digitize orders, floor, and management for smoother operations.",
+    "description": {
+      "es": "Convierte datos en decisiones útiles para crecer con menos riesgo.",
+      "cat": "Converteix dades en decisions útils per créixer amb menys risc.",
+      "en": "Turn data into useful decisions to grow with lower risk."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1300,
-    baseCost: 2400,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 2000,
+    "baseCost": 3000
   },
   {
-    id: "documents-colaboratives",
-    icon: "uil:file-alt",
-    name: {
-      es: "Documentos digitales y herramientas colaborativas",
-      cat: "Documents digitals i eines col·laboratives",
-      en: "Digital documents & collaboration tools",
+    "id": "web",
+    "icon": "uil:globe",
+    "name": {
+      "es": "Desarrollo de página web",
+      "cat": "Desenvolupament de pàgina web",
+      "en": "Website development"
     },
-    description: {
-      es: "Comparte, versiona y trabaja en equipo sin caos de archivos.",
-      cat: "Comparteix, versiona i treballa en equip sense caos d'arxius.",
-      en: "Share, version and collaborate without file chaos.",
+    "description": {
+      "es": "Web profesional para captar demanda y convertir visitas en contactos.",
+      "cat": "Web professional per captar demanda i convertir visites en contactes.",
+      "en": "Professional website to attract demand and convert visits into leads."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 900,
-    baseCost: 1500,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1500,
+    "baseCost": 2500
   },
   {
-    id: "erp-crm",
-    icon: "uil:database",
-    name: {
-      es: "Gestión digital (ERP y CRM)",
-      cat: "Gestió digital (ERP i CRM)",
-      en: "Digital management (ERP & CRM)",
+    "id": "erp-crm",
+    "icon": "uil:database",
+    "name": {
+      "es": "Gestión digital (ERP y CRM)",
+      "cat": "Gestió digital (ERP i CRM)",
+      "en": "Digital management (ERP & CRM)"
     },
-    description: {
-      es: "Controla ventas, operaciones y clientes desde un solo sistema.",
-      cat: "Controla vendes, operacions i clients des d'un sol sistema.",
-      en: "Control sales, operations and clients from one system.",
+    "description": {
+      "es": "Controla ventas, operaciones y clientes desde un solo sistema.",
+      "cat": "Controla vendes, operacions i clients des d'un sol sistema.",
+      "en": "Control sales, operations and clients from one system."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 2000,
-    baseCost: 3200,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 2000,
+    "baseCost": 3200
   },
   {
-    id: "web",
-    icon: "uil:globe",
-    name: {
-      es: "Desarrollo de página web",
-      cat: "Desenvolupament de pàgina web",
-      en: "Website development",
+    "id": "digitalitzacio-processos",
+    "icon": "uil:process",
+    "name": {
+      "es": "Digitalización de procesos",
+      "cat": "Digitalització de processos",
+      "en": "Process digitization"
     },
-    description: {
-      es: "Web profesional para captar demanda y convertir visitas en contactos.",
-      cat: "Web professional per captar demanda i convertir visites en contactes.",
-      en: "Professional website to attract demand and convert visits into leads.",
+    "description": {
+      "es": "Automatiza tareas internas para ahorrar tiempo y reducir errores.",
+      "cat": "Automatitza tasques internes per estalviar temps i reduir errors.",
+      "en": "Automate internal tasks to save time and reduce errors."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1500,
-    baseCost: 2500,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1200,
+    "baseCost": 2200
   },
   {
-    id: "seo-sem",
-    icon: "uil:search",
-    name: {
-      es: "Posicionamiento web (SEO y SEM)",
-      cat: "Posicionament web (SEO i SEM)",
-      en: "Web positioning (SEO & SEM)",
+    "id": "programari-gestio",
+    "icon": "uil:apps",
+    "name": {
+      "es": "Software de gestión",
+      "cat": "Programari de gestió",
+      "en": "Management software"
     },
-    description: {
-      es: "Haz que te encuentren primero con estrategia de visibilidad digital.",
-      cat: "Fes que et trobin primer amb estratègia de visibilitat digital.",
-      en: "Get found first with a digital visibility strategy.",
+    "description": {
+      "es": "Centraliza operaciones y gana control de negocio en tiempo real.",
+      "cat": "Centralitza operacions i guanya control de negoci en temps real.",
+      "en": "Centralize operations and gain real-time business control."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 500,
-    baseCost: 1200,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1700,
+    "baseCost": 2800
   },
   {
-    id: "formacions",
-    icon: "uil:graduation-cap",
-    name: {
-      es: "Formaciones en digitalización",
-      cat: "Formacions en digitalització",
-      en: "Digitalization training",
+    "id": "atencio-client",
+    "icon": "uil:headphones-alt",
+    "name": {
+      "es": "Atención al cliente",
+      "cat": "Atenció al client",
+      "en": "Customer service"
     },
-    description: {
-      es: "Tu equipo aprende a usar bien las herramientas y no depender de terceros.",
-      cat: "El teu equip aprèn a fer servir bé les eines i no dependre de tercers.",
-      en: "Your team learns tools properly and avoids third-party dependency.",
+    "description": {
+      "es": "Canales digitales para responder más rápido y mejor a tus clientes.",
+      "cat": "Canals digitals per respondre més ràpid i millor als teus clients.",
+      "en": "Digital channels to reply faster and better to your customers."
     },
-    subsidyPercent: 0.75,
-    maxSubsidy: 1500,
-    baseCost: 2200,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1000,
+    "baseCost": 1800
   },
   {
-    id: "bi",
-    icon: "uil:chart-pie",
-    name: {
-      es: "Analítica y explotación de datos (BI)",
-      cat: "Analítica i explotació de dades (BI)",
-      en: "Analytics & business intelligence (BI)",
+    "id": "formacions",
+    "icon": "uil:graduation-cap",
+    "name": {
+      "es": "Formaciones en digitalización",
+      "cat": "Formacions en digitalització",
+      "en": "Digitalization training"
     },
-    description: {
-      es: "Convierte datos en decisiones útiles para crecer con menos riesgo.",
-      cat: "Converteix dades en decisions útils per créixer amb menys risc.",
-      en: "Turn data into useful decisions to grow with lower risk.",
+    "description": {
+      "es": "Tu equipo aprende a usar bien las herramientas y no depender de terceros.",
+      "cat": "El teu equip aprèn a fer servir bé les eines i no dependre de tercers.",
+      "en": "Your team learns tools properly and avoids third-party dependency."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 2000,
-    baseCost: 3000,
+    "subsidyPercent": 0.75,
+    "maxSubsidy": 1500,
+    "baseCost": 2200
   },
   {
-    id: "ia",
-    icon: "uil:robot",
-    name: {
-      es: "Inteligencia artificial",
-      cat: "Intel·ligència artificial",
-      en: "Artificial intelligence",
+    "id": "documents-colaboratives",
+    "icon": "uil:file-alt",
+    "name": {
+      "es": "Documentos digitales y herramientas colaborativas",
+      "cat": "Documents digitals i eines col·laboratives",
+      "en": "Digital documents & collaboration tools"
     },
-    description: {
-      es: "Automatiza y predice para ahorrar horas y aumentar productividad.",
-      cat: "Automatitza i prediu per estalviar hores i augmentar productivitat.",
-      en: "Automate and predict to save hours and boost productivity.",
+    "description": {
+      "es": "Comparte, versiona y trabaja en equipo sin caos de archivos.",
+      "cat": "Comparteix, versiona i treballa en equip sense caos d'arxius.",
+      "en": "Share, version and collaborate without file chaos."
     },
-    subsidyPercent: 0.75,
-    maxSubsidy: 3000,
-    baseCost: 4200,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 900,
+    "baseCost": 1500
   },
   {
-    id: "programari-gestio",
-    icon: "uil:apps",
-    name: {
-      es: "Software de gestión",
-      cat: "Programari de gestió",
-      en: "Management software",
+    "id": "ingressos-preus",
+    "icon": "uil:chart-line",
+    "name": {
+      "es": "Gestión de ingresos y análisis de precios",
+      "cat": "Gestió d’ingressos i anàlisi de preus",
+      "en": "Revenue management & price analytics"
     },
-    description: {
-      es: "Centraliza operaciones y gana control de negocio en tiempo real.",
-      cat: "Centralitza operacions i guanya control de negoci en temps real.",
-      en: "Centralize operations and gain real-time business control.",
+    "description": {
+      "es": "Ajusta precios con datos para mejorar margen y ocupación.",
+      "cat": "Ajusta preus amb dades per millorar marge i ocupació.",
+      "en": "Adjust pricing with data to improve margin and occupancy."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 1700,
-    baseCost: 2800,
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1500,
+    "baseCost": 2600
   },
   {
-    id: "botiga-online",
-    icon: "uil:shopping-cart-alt",
-    name: {
-      es: "Desarrollo de tienda online",
-      cat: "Desenvolupament de botiga online",
-      en: "Online store development",
+    "id": "restaurants",
+    "icon": "uil:utensils",
+    "name": {
+      "es": "Digitalización de restaurantes",
+      "cat": "Digitalització de restaurants",
+      "en": "Restaurant digitization"
     },
-    description: {
-      es: "Vende online con catálogo, pagos y logística integrada.",
-      cat: "Ven online amb catàleg, pagaments i logística integrada.",
-      en: "Sell online with catalog, payments and integrated logistics.",
+    "description": {
+      "es": "Digitaliza pedidos, sala y gestión para operar con menos fricción.",
+      "cat": "Digitalitza comandes, sala i gestió per operar amb menys fricció.",
+      "en": "Digitize orders, floor, and management for smoother operations."
     },
-    subsidyPercent: 0.65,
-    maxSubsidy: 2000,
-    baseCost: 3500,
-  },
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1300,
+    "baseCost": 2400
+  }
 ];
 
 export const suggestedPacks = {
-  micro: ["web", "seo-sem", "formacions"],
-  ecommerce: ["botiga-online", "seo-sem", "atencio-client", "bi"],
-  automation: ["digitalitzacio-processos", "erp-crm", "ia", "bi"],
+  "micro": [
+    "web",
+    "seo-sem",
+    "formacions"
+  ],
+  "ecommerce": [
+    "botiga-online",
+    "seo-sem",
+    "atencio-client",
+    "bi"
+  ],
+  "automation": [
+    "digitalitzacio-processos",
+    "erp-crm",
+    "ia",
+    "bi"
+  ]
 };

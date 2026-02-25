@@ -36,20 +36,19 @@ const localeCode = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "ca-A
     <p class="mt-3 text-slate-700 leading-relaxed text-center">{content.calculatorIntro}</p>
 
     <div class="mt-5 flex flex-wrap justify-center gap-2" id="pack-buttons">
-      <button type="button" data-pack="micro" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">{content.packMicro}</button>
-      <button type="button" data-pack="ecommerce" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">{content.packEcommerce}</button>
-      <button type="button" data-pack="automation" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">{content.packAutomation}</button>
-      <button type="button" data-pack="clear" class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">{content.packClear}</button>
+      <button type="button" data-pack="micro" class="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">{content.packMicro}</button>
+      <button type="button" data-pack="ecommerce" class="rounded-full bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-700">{content.packEcommerce}</button>
+      <button type="button" data-pack="automation" class="rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700">{content.packAutomation}</button>
+      <button type="button" data-pack="clear" class="px-3 py-2 text-sm font-semibold text-slate-600 underline underline-offset-4 hover:text-slate-900">{content.packClear}</button>
     </div>
 
     <div class="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white">
-      <table class="w-full min-w-[980px] text-sm">
+      <table class="w-full min-w-[780px] text-sm">
         <thead class="bg-slate-50">
           <tr class="text-slate-700">
             <th class="px-3 py-3 text-center">{content.colSelect}</th>
             <th class="px-3 py-3 text-left">{content.colService}</th>
             <th class="px-3 py-3 text-right">{content.colCost}</th>
-            <th class="px-3 py-3 text-right">{content.colPercent}</th>
             <th class="px-3 py-3 text-right">{content.colSubsidy}</th>
             <th class="px-3 py-3 text-right">{content.colFinal}</th>
           </tr>
@@ -76,8 +75,7 @@ const localeCode = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "ca-A
                 </div>
               </td>
               <td class="px-3 py-3 text-right">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(service.baseCost)}</td>
-              <td class="px-3 py-3 text-right">{Math.round(service.subsidyPercent * 100)}%</td>
-              <td class="px-3 py-3 text-right subsidy-cell">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
+              <td class={`px-3 py-3 text-right subsidy-cell ${service.subsidyPercent === 0.75 ? "text-emerald-700" : ""}` }>{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
               <td class="px-3 py-3 text-right final-cell">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
             </tr>
           ))}
@@ -86,7 +84,6 @@ const localeCode = locale === "en" ? "en-US" : locale === "es" ? "es-ES" : "ca-A
           <tr>
             <td class="px-3 py-3" colspan="2">{content.totalLabel}</td>
             <td class="px-3 py-3 text-right" id="total-cost">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
-            <td></td>
             <td class="px-3 py-3 text-right text-indigo-700" id="total-subsidy">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
             <td class="px-3 py-3 text-right" id="total-final">{new Intl.NumberFormat(localeCode, { style: 'currency', currency: 'EUR' }).format(0)}</td>
           </tr>
