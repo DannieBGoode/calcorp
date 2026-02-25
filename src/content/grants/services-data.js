@@ -14,7 +14,7 @@ export const grantsServices = [
     },
     "subsidyPercent": 0.65,
     "maxSubsidy": 1500,
-    "baseCost": 2500
+    "baseCost": 2307.69
   },
   {
     "id": "botiga-online",
@@ -30,8 +30,8 @@ export const grantsServices = [
       "en": "Sell online with catalog, payments and integrated logistics."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 2000,
-    "baseCost": 3500
+    "maxSubsidy": 1500,
+    "baseCost": 2307.69
   },
   {
     "id": "seo-sem",
@@ -48,7 +48,7 @@ export const grantsServices = [
     },
     "subsidyPercent": 0.65,
     "maxSubsidy": 500,
-    "baseCost": 1200
+    "baseCost": 769.23
   },
   {
     "id": "ia",
@@ -65,7 +65,7 @@ export const grantsServices = [
     },
     "subsidyPercent": 0.75,
     "maxSubsidy": 3000,
-    "baseCost": 4200
+    "baseCost": 4000
   },
   {
     "id": "bi",
@@ -80,9 +80,9 @@ export const grantsServices = [
       "cat": "Converteix dades en decisions útils per créixer amb menys risc.",
       "en": "Turn data into useful decisions to grow with lower risk."
     },
-    "subsidyPercent": 0.65,
+    "subsidyPercent": 0.75,
     "maxSubsidy": 2000,
-    "baseCost": 3000
+    "baseCost": 2666.67
   },
   {
     "id": "reserva-online",
@@ -98,8 +98,8 @@ export const grantsServices = [
       "en": "Let clients book 24/7 without depending on opening hours."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1000,
-    "baseCost": 1700
+    "maxSubsidy": 2000,
+    "baseCost": 3076.92
   },
   {
     "id": "erp-crm",
@@ -115,8 +115,8 @@ export const grantsServices = [
       "en": "Control sales, operations and clients from one system."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 2000,
-    "baseCost": 3200
+    "maxSubsidy": 3000,
+    "baseCost": 4615.38
   },
   {
     "id": "digitalitzacio-processos",
@@ -132,8 +132,8 @@ export const grantsServices = [
       "en": "Automate internal tasks to save time and reduce errors."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1200,
-    "baseCost": 2200
+    "maxSubsidy": 2500,
+    "baseCost": 3846.15
   },
   {
     "id": "programari-gestio",
@@ -149,8 +149,8 @@ export const grantsServices = [
       "en": "Centralize operations and gain real-time business control."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1700,
-    "baseCost": 2800
+    "maxSubsidy": 3000,
+    "baseCost": 4615.38
   },
   {
     "id": "atencio-client",
@@ -166,8 +166,8 @@ export const grantsServices = [
       "en": "Digital channels to reply faster and better to your customers."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1000,
-    "baseCost": 1800
+    "maxSubsidy": 1500,
+    "baseCost": 2307.69
   },
   {
     "id": "formacions",
@@ -184,7 +184,7 @@ export const grantsServices = [
     },
     "subsidyPercent": 0.75,
     "maxSubsidy": 1500,
-    "baseCost": 2200
+    "baseCost": 2000
   },
   {
     "id": "documents-colaboratives",
@@ -217,8 +217,8 @@ export const grantsServices = [
       "en": "Adjust pricing with data to improve margin and occupancy."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1500,
-    "baseCost": 2600
+    "maxSubsidy": 2500,
+    "baseCost": 3846.15
   },
   {
     "id": "restaurants",
@@ -234,8 +234,8 @@ export const grantsServices = [
       "en": "Digitize orders, floor, and management for smoother operations."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1300,
-    "baseCost": 2400
+    "maxSubsidy": 3000,
+    "baseCost": 4615.38
   }
 ];
 
@@ -249,7 +249,6 @@ export const suggestedPacks = {
     "web",
     "botiga-online",
     "seo-sem",
-    "atencio-client",
     "bi"
   ],
   "automation": [
