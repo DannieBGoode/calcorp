@@ -6,7 +6,7 @@ const content = {
   eyebrow: "Andorra grants",
   title: "Digitalization grants in Andorra (PDE Program)",
   intro:
-    "Informational page about PDE grants for Andorran companies. We summarize the key details and the eligible solution lines listed on the official website.",
+    "Practical overview of the PDE program for Andorran businesses, with indicative company-size budget tiers and highlighted digital solutions.",
   officialSource: {
     title: "Official reference (absolute priority)",
     description:
@@ -14,47 +14,102 @@ const content = {
     cta: "Check the official PDE page",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  subsidySectionsTitle: "Eligible digitalization solution lines (PDE)",
-  subsidySectionsIntro:
-    "These are the digitalization solution sections described by the PDE. The active call may define the exact scope, amounts, and eligibility criteria.",
-  subsidySections: [
-    "Website and Internet presence",
-    "Ecommerce",
-    "Social media management",
-    "Customer management (CRM)",
-    "Business intelligence and analytics",
-    "Virtual office tools and services",
-    "Process management",
-    "Electronic invoicing",
-    "Secure communications",
-    "Cybersecurity",
-    "Advanced Internet presence",
-    "Marketplace",
+  companyBudgetTitle: "Indicative grant tiers by company size",
+  companyBudgetIntro:
+    "These amounts are shown as reference under PDE. Always validate against the current official call.",
+  companyBudgets: [
+    { name: "Large company", workers: "More than 100 employees", amount: "€3,000" },
+    { name: "Medium company", workers: "26 to 100 employees", amount: "€4,000" },
+    { name: "Small company", workers: "6 to 25 employees", amount: "€5,500" },
+    { name: "Micro business", workers: "1 to 5 employees", amount: "€6,000" },
   ],
-  keyPointsTitle: "Key points to understand the PDE",
-  keyPoints: [
+  featuredSolutionsTitle: "Highlighted solutions and subsidy amounts",
+  featuredSolutionsIntro:
+    "These highlighted lines are based on publicly available PDE information. CALCORP offers these 4 lines.",
+  featuresLabel: "Functions and characteristics",
+  benefitsLabel: "Benefits",
+  calcorpOfferBadge: "Solution offered by CALCORP",
+  featuredSolutions: [
     {
-      title: "What it is",
-      description:
-        "A public support program designed to accelerate digital transformation projects for businesses in Andorra.",
+      title: "Website development",
+      amount: "€1,500",
+      subsidyRule:
+        "Maximum subsidy: up to 65% of real implementation cost, without exceeding the cap defined for this solution.",
+      summary:
+        "Build a professional website to showcase products/services and, where applicable, support remote sales.",
+      features: [
+        "Professional web design for desktop and mobile.",
+        "Content manager for autonomous edits.",
+        "Domain reservation.",
+        "Hosting for site operation.",
+      ],
+      benefits: [
+        "Greater online visibility.",
+        "More sales opportunities.",
+        "Stronger reputation and credibility.",
+      ],
+      offeredByCalcorp: true,
     },
     {
-      title: "Who can benefit",
-      description:
-        "Usually companies and self-employed professionals that meet the conditions defined in each active call.",
+      title: "Web positioning (SEO & SEM)",
+      amount: "€500",
+      subsidyRule:
+        "Maximum subsidy: up to 65% of real implementation cost, without exceeding the cap defined for this solution.",
+      summary:
+        "Apply SEO/SEM actions to improve discoverability across website, social channels, and digital marketing.",
+      features: [
+        "On-page SEO for content, titles, meta descriptions, and structure.",
+        "Off-page SEO with links, social signals, and mentions.",
+        "Technical SEO: performance, mobile friendliness, structured data.",
+        "Keyword research and performance monitoring.",
+      ],
+      benefits: [
+        "More qualified traffic.",
+        "Wider target audience reach.",
+        "Improved commercial opportunities.",
+      ],
+      offeredByCalcorp: true,
     },
     {
-      title: "What to prepare",
-      description:
-        "A realistic project scope, required business/legal documentation, and a provider proposal aligned with official requirements.",
+      title: "Digitalization training",
+      amount: "€1,500",
+      subsidyRule:
+        "Maximum subsidy: up to 75% of real implementation cost, without exceeding the cap defined for this solution.",
+      summary:
+        "Train employees to adopt new tools and strengthen digital inclusion with secure, efficient technology usage.",
+      features: [
+        "Basic digital skills and office tools.",
+        "Basic/advanced usage of deployed tools (ERP/CRM).",
+        "Training and assessments for certifications.",
+        "Cybersecurity, emerging technologies, and automation.",
+      ],
+      benefits: [
+        "Higher operational efficiency.",
+        "Continuous learning culture.",
+        "Better decision-making.",
+      ],
+      offeredByCalcorp: true,
     },
-  ],
-  howToApplyTitle: "Recommended application path",
-  steps: [
-    "Review the current call on the official PDE website and confirm your eligibility.",
-    "Select the eligible line that best matches your project.",
-    "Prepare all required documentation before the deadline.",
-    "Submit your application only through official channels and keep all records.",
+    {
+      title: "Artificial intelligence",
+      amount: "€3,000",
+      subsidyRule:
+        "Maximum subsidy: up to 75% of real implementation cost, without exceeding the cap defined for this solution.",
+      summary:
+        "Optimize processes, analyze data, and support decision-making through automation and intelligent technology.",
+      features: [
+        "Automation of repetitive tasks with bots and AI algorithms.",
+        "Real-time data processing for predictions and insights.",
+        "Service personalization with recommendations and assistants.",
+        "Integration with other systems and scalability.",
+      ],
+      benefits: [
+        "Lower operational costs and time.",
+        "Higher productivity with fewer human errors.",
+        "Scalability without major additional investment.",
+      ],
+      offeredByCalcorp: true,
+    },
   ],
   legalNotice: {
     title: "Important legal clarification",

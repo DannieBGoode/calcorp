@@ -6,7 +6,7 @@ const content = {
   eyebrow: "Subvenciones en Andorra",
   title: "Subvenciones para digitalización en Andorra (Programa PDE)",
   intro:
-    "Página informativa sobre las ayudas PDE para empresas de Andorra. Hemos resumido la información clave y las líneas subvencionables publicadas por la web oficial.",
+    "Resumen práctico del programa PDE para empresas de Andorra, con importes orientativos por tamaño de empresa y soluciones digitales destacadas.",
   officialSource: {
     title: "Referencia oficial (prioridad absoluta)",
     description:
@@ -14,47 +14,102 @@ const content = {
     cta: "Consultar la página oficial del PDE",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  subsidySectionsTitle: "Líneas de digitalización subvencionables (según PDE)",
-  subsidySectionsIntro:
-    "Estas son las secciones de soluciones de digitalización descritas en el PDE. La convocatoria vigente puede matizar alcance, cuantías y elegibilidad.",
-  subsidySections: [
-    "Lugar web y presencia en Internet",
-    "Comercio electrónico (ecommerce)",
-    "Gestión de redes sociales",
-    "Gestión de clientes (CRM)",
-    "Business Intelligence y analítica",
-    "Servicios y herramientas de oficina virtual",
-    "Gestión de procesos",
-    "Factura electrónica",
-    "Comunicaciones seguras",
-    "Ciberseguridad",
-    "Presencia avanzada en Internet",
-    "Marketplace",
+  companyBudgetTitle: "Partidas orientativas por tamaño de empresa",
+  companyBudgetIntro:
+    "Importes publicados como referencia en el PDE. Debes validar siempre la convocatoria oficial vigente.",
+  companyBudgets: [
+    { name: "Gran empresa", workers: "Más de 100 trabajadores", amount: "3.000 €" },
+    { name: "Mediana empresa", workers: "26 a 100 trabajadores", amount: "4.000 €" },
+    { name: "Pequeña empresa", workers: "6 a 25 trabajadores", amount: "5.500 €" },
+    { name: "Microempresa", workers: "1 a 5 trabajadores", amount: "6.000 €" },
   ],
-  keyPointsTitle: "Puntos clave para entender el PDE",
-  keyPoints: [
+  featuredSolutionsTitle: "Soluciones destacadas y su importe de subvención",
+  featuredSolutionsIntro:
+    "Estas son las líneas destacadas según la información pública del PDE. CALCORP ofrece estas 4 partidas.",
+  featuresLabel: "Funciones y características",
+  benefitsLabel: "Beneficios",
+  calcorpOfferBadge: "Solución ofrecida por CALCORP",
+  featuredSolutions: [
     {
-      title: "Qué es",
-      description:
-        "Programa público de apoyo para acelerar proyectos de transformación digital en empresas de Andorra.",
+      title: "Desarrollo de página web",
+      amount: "1.500 €",
+      subsidyRule:
+        "Importe máximo subvencionable: hasta el 65% del coste real de implementación, sin superar el máximo de la solución.",
+      summary:
+        "Disponer de una web profesional para mostrar catálogo, servicios e información de contacto y, si aplica, vender a distancia.",
+      features: [
+        "Diseño web profesional adaptado a escritorio y móvil.",
+        "Gestor de contenidos para editar la web de forma autónoma.",
+        "Reserva de dominio.",
+        "Hosting para el funcionamiento del sitio.",
+      ],
+      benefits: [
+        "Mayor visibilidad online.",
+        "Más oportunidades de venta.",
+        "Mejora de reputación y credibilidad.",
+      ],
+      offeredByCalcorp: true,
     },
     {
-      title: "Quién puede beneficiarse",
-      description:
-        "Normalmente empresas y autónomos que cumplan las condiciones fijadas en cada convocatoria activa.",
+      title: "Posicionamiento web (SEO y SEM)",
+      amount: "500 €",
+      subsidyRule:
+        "Importe máximo subvencionable: hasta el 65% del coste real de implementación, sin superar el máximo de la solución.",
+      summary:
+        "Integración de acciones SEO/SEM para aumentar la visibilidad digital en web, redes sociales y canales de marketing.",
+      features: [
+        "On-page SEO: contenidos, títulos, metadescripciones y estructura.",
+        "Off-page SEO: enlaces, señales sociales y menciones.",
+        "SEO técnico: velocidad, mobile friendliness y datos estructurados.",
+        "Investigación de palabras clave y monitorización de rendimiento.",
+      ],
+      benefits: [
+        "Más tráfico cualificado.",
+        "Mayor alcance de público objetivo.",
+        "Mejora de oportunidades comerciales.",
+      ],
+      offeredByCalcorp: true,
     },
     {
-      title: "Qué preparar",
-      description:
-        "Alcance realista del proyecto, documentación legal/empresarial requerida y propuesta de proveedor alineada con los requisitos oficiales.",
+      title: "Formaciones en digitalización",
+      amount: "1.500 €",
+      subsidyRule:
+        "Importe máximo subvencionable: hasta el 75% del coste real de implementación, sin superar el máximo de la solución.",
+      summary:
+        "Formación de empleados para usar nuevas herramientas y mejorar la inclusión digital con uso seguro y eficiente de la tecnología.",
+      features: [
+        "Competencias digitales básicas y ofimática.",
+        "Uso básico/avanzado de herramientas desplegadas (ERP/CRM).",
+        "Formaciones y evaluaciones para certificaciones.",
+        "Ciberseguridad, tecnologías emergentes y automatización.",
+      ],
+      benefits: [
+        "Mayor eficiencia operativa.",
+        "Cultura de aprendizaje continuo.",
+        "Mejor toma de decisiones.",
+      ],
+      offeredByCalcorp: true,
     },
-  ],
-  howToApplyTitle: "Ruta recomendada para solicitar",
-  steps: [
-    "Revisa la convocatoria vigente en la web oficial del PDE y confirma tu elegibilidad.",
-    "Selecciona la línea subvencionable que mejor encaja con tu proyecto.",
-    "Reúne toda la documentación necesaria antes de las fechas límite.",
-    "Presenta la solicitud solo por canales oficiales y conserva justificantes.",
+    {
+      title: "Inteligencia artificial",
+      amount: "3.000 €",
+      subsidyRule:
+        "Importe máximo subvencionable: hasta el 75% del coste real de implementación, sin superar el máximo de la solución.",
+      summary:
+        "Optimización de procesos, análisis de datos y apoyo a la toma de decisiones mediante automatización y tecnología inteligente.",
+      features: [
+        "Automatización de tareas repetitivas con bots y algoritmos.",
+        "Análisis de datos en tiempo real para predicciones e insights.",
+        "Personalización de servicios con recomendaciones y asistentes.",
+        "Integración con otros sistemas y escalabilidad.",
+      ],
+      benefits: [
+        "Reducción de costes y tiempos operativos.",
+        "Mayor productividad y menos errores humanos.",
+        "Escalabilidad sin grandes inversiones adicionales.",
+      ],
+      offeredByCalcorp: true,
+    },
   ],
   legalNotice: {
     title: "Aclaración legal importante",
