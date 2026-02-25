@@ -1,0 +1,71 @@
+---
+import Layout from "@layouts/Layout.astro";
+import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
+
+const content = {
+  eyebrow: "Subvenciones en Andorra",
+  title: "Subvenciones para digitalización en Andorra (Programa PDE)",
+  intro:
+    "Guía práctica para entender el Programa de Digitalización de Empresas (PDE), con un resumen claro de objetivos, beneficiarios y preparación de solicitud.",
+  officialSource: {
+    title: "Referencia oficial (prioridad absoluta)",
+    description:
+      "La web oficial de Gobierno / Andorra Digital es la única fuente con validez legal para requisitos, plazos, gastos subvencionables y condiciones.",
+    cta: "Consultar la página oficial del PDE",
+    url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
+  },
+  keyPointsTitle: "Puntos clave para entender el PDE",
+  keyPoints: [
+    {
+      title: "Qué es",
+      description:
+        "Programa público de apoyo para acelerar proyectos de transformación digital en empresas de Andorra.",
+    },
+    {
+      title: "Qué suele cubrir",
+      description:
+        "Soluciones como web/ecommerce, ciberseguridad, cloud, automatización de procesos, marketing digital y herramientas de gestión digital (según convocatoria).",
+    },
+    {
+      title: "Quién puede beneficiarse",
+      description:
+        "Normalmente empresas y autónomos que cumplan las condiciones fijadas en cada convocatoria activa.",
+    },
+    {
+      title: "Qué preparar",
+      description:
+        "Alcance realista del proyecto, documentación legal/empresarial requerida y propuesta de proveedor alineada con los requisitos oficiales.",
+    },
+  ],
+  howToApplyTitle: "Ruta recomendada para solicitar",
+  steps: [
+    "Revisa la convocatoria vigente en la web oficial del PDE y confirma tu elegibilidad.",
+    "Define prioridades del proyecto y relaciónalas con categorías de solución subvencionables.",
+    "Reúne toda la documentación necesaria antes de las fechas límite.",
+    "Presenta la solicitud solo por canales oficiales y conserva justificantes.",
+  ],
+  legalNotice: {
+    title: "Aclaración legal importante",
+    body:
+      "Esta página es informativa. La verdad absoluta y las condiciones legalmente vinculantes son únicamente las publicadas en la web oficial de Andorra Digital / Gobierno.",
+  },
+  references: [
+    {
+      label: "Web oficial: Andorra Digital — Soluciones de Digitalización PDE",
+      url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
+    },
+    {
+      label: "Ejemplo de referencia de mercado: BitaNube",
+      url: "https://www.bitanube.com/ca/subvencio-digitalitzacio-govern-andorra",
+    },
+    {
+      label: "Ejemplo de referencia de mercado: Andornet",
+      url: "https://www.andornet.ad/programa-digitalitzacio-empreses-pde",
+    },
+  ],
+};
+---
+
+<Layout title={content.title}>
+  <AndorraGrantsPage content={content} />
+</Layout>

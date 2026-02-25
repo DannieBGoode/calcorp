@@ -1,0 +1,71 @@
+---
+import Layout from "@layouts/Layout.astro";
+import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
+
+const content = {
+  eyebrow: "Andorra grants",
+  title: "Digitalization grants in Andorra (PDE Program)",
+  intro:
+    "A practical guide to understand the Program for the Digitalization of Businesses (PDE), with a clear summary of objectives, who can apply, and how to prepare your application.",
+  officialSource: {
+    title: "Official reference (always prioritize this source)",
+    description:
+      "The official Government / Andorra Digital website is the only source with legal validity for requirements, timelines, eligible costs, and grant conditions.",
+    cta: "Check the official PDE page",
+    url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
+  },
+  keyPointsTitle: "Key points to understand the PDE",
+  keyPoints: [
+    {
+      title: "What it is",
+      description:
+        "Public support program aimed at accelerating digital transformation projects for companies in Andorra.",
+    },
+    {
+      title: "What it usually covers",
+      description:
+        "Solutions such as websites/ecommerce, cybersecurity, cloud, process automation, digital marketing, and digital management tools (depending on each call).",
+    },
+    {
+      title: "Who can benefit",
+      description:
+        "Usually companies and self-employed professionals that meet the conditions defined in each active call.",
+    },
+    {
+      title: "What to prepare",
+      description:
+        "A realistic project scope, required company/legal documentation, and a provider proposal aligned with the official requirements.",
+    },
+  ],
+  howToApplyTitle: "Recommended application path",
+  steps: [
+    "Review the current call on the official PDE site and confirm your eligibility.",
+    "Define your project priorities and map them to the eligible solution categories.",
+    "Collect all required documentation before submission deadlines.",
+    "Submit your application only through the official channels and keep all evidence/receipts.",
+  ],
+  legalNotice: {
+    title: "Important legal clarification",
+    body:
+      "This page is informative. The absolute truth and legally binding conditions are only those published on the official Andorra Digital / Government website.",
+  },
+  references: [
+    {
+      label: "Official website: Andorra Digital — PDE Digitalization Solutions",
+      url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
+    },
+    {
+      label: "Market reference example: BitaNube",
+      url: "https://www.bitanube.com/ca/subvencio-digitalitzacio-govern-andorra",
+    },
+    {
+      label: "Market reference example: Andornet",
+      url: "https://www.andornet.ad/programa-digitalitzacio-empreses-pde",
+    },
+  ],
+};
+---
+
+<Layout title={content.title}>
+  <AndorraGrantsPage content={content} />
+</Layout>
