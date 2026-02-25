@@ -1,5 +1,22 @@
 export const grantsServices = [
   {
+    "id": "web",
+    "icon": "uil:globe",
+    "name": {
+      "es": "Desarrollo de página web",
+      "cat": "Desenvolupament de pàgina web",
+      "en": "Website development"
+    },
+    "description": {
+      "es": "Web profesional para captar demanda y convertir visitas en contactos.",
+      "cat": "Web professional per captar demanda i convertir visites en contactes.",
+      "en": "Professional website to attract demand and convert visits into leads."
+    },
+    "subsidyPercent": 0.65,
+    "maxSubsidy": 1500,
+    "baseCost": 2500
+  },
+  {
     "id": "botiga-online",
     "icon": "uil:shopping-cart-alt",
     "name": {
@@ -32,23 +49,6 @@ export const grantsServices = [
     "subsidyPercent": 0.65,
     "maxSubsidy": 500,
     "baseCost": 1200
-  },
-  {
-    "id": "reserva-online",
-    "icon": "uil:calendar-alt",
-    "name": {
-      "es": "Reserva online",
-      "cat": "Reserva online",
-      "en": "Online booking"
-    },
-    "description": {
-      "es": "Permite reservas 24/7 sin depender del horario del negocio.",
-      "cat": "Permet reserves 24/7 sense dependre de l'horari del negoci.",
-      "en": "Let clients book 24/7 without depending on opening hours."
-    },
-    "subsidyPercent": 0.65,
-    "maxSubsidy": 1000,
-    "baseCost": 1700
   },
   {
     "id": "ia",
@@ -85,21 +85,21 @@ export const grantsServices = [
     "baseCost": 3000
   },
   {
-    "id": "web",
-    "icon": "uil:globe",
+    "id": "reserva-online",
+    "icon": "uil:calendar-alt",
     "name": {
-      "es": "Desarrollo de página web",
-      "cat": "Desenvolupament de pàgina web",
-      "en": "Website development"
+      "es": "Reserva online",
+      "cat": "Reserva online",
+      "en": "Online booking"
     },
     "description": {
-      "es": "Web profesional para captar demanda y convertir visitas en contactos.",
-      "cat": "Web professional per captar demanda i convertir visites en contactes.",
-      "en": "Professional website to attract demand and convert visits into leads."
+      "es": "Permite reservas 24/7 sin depender del horario del negocio.",
+      "cat": "Permet reserves 24/7 sense dependre de l'horari del negoci.",
+      "en": "Let clients book 24/7 without depending on opening hours."
     },
     "subsidyPercent": 0.65,
-    "maxSubsidy": 1500,
-    "baseCost": 2500
+    "maxSubsidy": 1000,
+    "baseCost": 1700
   },
   {
     "id": "erp-crm",
