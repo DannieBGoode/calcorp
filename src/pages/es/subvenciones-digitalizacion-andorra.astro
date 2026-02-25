@@ -1,0 +1,67 @@
+---
+import Layout from "@layouts/Layout.astro";
+import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
+
+const content = {
+  eyebrow: "Subvenciones en Andorra",
+  title: "Consigue hasta 6.000 € para digitalizar tu empresa en Andorra (PDE)",
+  intro:
+    "Aquí tienes una visión clara para decidir rápido: tramos por tamaño, servicios y estimación de ayuda.",
+  officialSource: {
+    title: "Información PDE",
+    description:
+      "Información resumida con fines orientativos. Las condiciones legales y actualizadas son siempre las publicadas por Andorra Digital / Govern.",
+    cta: "Consultar información PDE",
+    footerCta: "Fuente oficial",
+    url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
+  },
+  companyBudgetTitle: "Importe máximo orientativo por tamaño de empresa",
+  companyBudgetIntro: "Estos tramos muestran el máximo orientativo que puedes llegar a recibir según el tamaño de tu empresa.",
+  companyBudgets: [
+    { icon: "uil:user", name: "Microempresa", workers: "1 a 5 empleados", amount: "Hasta 6.000 €" },
+    { icon: "uil:users-alt", name: "Pequeña empresa", workers: "6 a 25 empleados", amount: "Hasta 5.500 €" },
+    { icon: "uil:building", name: "Mediana empresa", workers: "26 a 100 empleados", amount: "Hasta 4.000 €" },
+    { icon: "uil:building", name: "Gran empresa", workers: "Más de 100 empleados", amount: "Hasta 3.000 €" },
+  ],
+  servicesTitle: "Servicios subvencionables",
+  servicesIntro: "Haz clic en la i para ver detalle rápido de cada servicio.",
+  infoSubsidyLabel: "Subvención",
+  infoMaxLabel: "Máximo",
+  calculatorTitle: "Calculadora de subvención",
+  calculatorIntro: "Activa o desactiva servicios y calcula tu escenario en tiempo real.",
+  packMicro: "Pack microempresa",
+  packEcommerce: "Pack ecommerce",
+  packAutomation: "Pack automatización",
+  packClear: "Limpiar",
+  colSelect: "✓",
+  colService: "Servicio",
+  colCost: "Coste servicio",
+  colPercent: "% subv.",
+  colSubsidy: "Subvención",
+  colFinal: "Coste final",
+  totalLabel: "Totales",
+  timelineTitle: "Cómo solicitar la subvención al Govern de Andorra (paso a paso)",
+  timelineSteps: [
+    { title: "Verificar elegibilidad", body: "Empresa registrada en Andorra, activa en Registre de Comerç y tramo de empleados correcto." },
+    { title: "Definir proyecto", body: "Seleccionar servicios subvencionables y validar encaje con catálogo PDE." },
+    { title: "Pedir presupuestos", body: "Solicitar presupuestos desglosados solo a proveedores TIC homologados." },
+    { title: "Acceder a solicitud online", body: "Entrar en andorra-digital.com > Programa de Digitalització d’Empreses (PDE)." },
+    { title: "Rellenar solicitud", body: "Datos de empresa, descripción de proyecto y presupuestos adjuntos." },
+    { title: "Esperar resolución", body: "El Govern valida condiciones técnicas y administrativas." },
+    { title: "Aprobación e importe", body: "Se confirma la subvención concedida por categoría (hasta 6.000 € total)." },
+    { title: "Ejecutar proyecto", body: "No iniciar ni pagar antes de tener resolución aprobada." },
+    { title: "Justificar gasto", body: "Presentar facturas pagadas y evidencias de ejecución." },
+    { title: "Cobro", body: "Transferencia al solicitante tras validación final del Govern." },
+  ],
+  timelineNotes: [
+    "Las solicitudes se atienden por orden de llegada hasta agotar presupuesto.",
+    "No se subvencionan facturas pagadas antes de la aprobación.",
+  ],
+  contactTitle: "Pide presupuesto",
+  contactIntro: "Cuéntanos qué quieres activar y te enviamos propuesta.",
+};
+---
+
+<Layout title={content.title}>
+  <AndorraGrantsPage content={content} lang="es" />
+</Layout>
