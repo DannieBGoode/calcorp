@@ -4,95 +4,65 @@ import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
 
 const content = {
   eyebrow: "Andorra grants",
-  title: "PDE Andorra: real money to digitize your business",
+  title: "PDE Andorra: digitize with clarity and numbers",
   intro:
-    "Short and sharp: what can be subsidized and what CALCORP can execute for you.",
+    "A clear view to decide fast: company tiers, eligible services and grant estimation.",
   officialSource: {
-    title: "Official source first",
+    title: "PDE information",
     description:
-      "We summarize it. The legal and up-to-date truth is on Andorra Digital / Government.",
-    cta: "Go to the official PDE page",
+      "This is a summary for guidance. Legal and updated conditions are always those published by Andorra Digital / Government.",
+    cta: "Check PDE information",
+    footerCta: "Official source",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  companyBudgetTitle: "Grant tiers by company size",
-  companyBudgetIntro: "Ordered from smallest to largest. Always validate amounts and conditions in the active call.",
+  companyBudgetTitle: "Indicative amount by company size",
+  companyBudgetIntro: "Ordered from smallest to largest.",
   companyBudgets: [
-    { icon: "👤", name: "Micro business", workers: "1 to 5 employees", amount: "€6,000" },
-    { icon: "👥", name: "Small company", workers: "6 to 25 employees", amount: "€5,500" },
-    { icon: "🏢", name: "Medium company", workers: "26 to 100 employees", amount: "€4,000" },
-    { icon: "🏭", name: "Large company", workers: "More than 100 employees", amount: "€3,000" },
+    { icon: "uil:user", name: "Micro business", workers: "1 to 5 employees", amount: "€6,000" },
+    { icon: "uil:users-alt", name: "Small company", workers: "6 to 25 employees", amount: "€5,500" },
+    { icon: "uil:building", name: "Medium company", workers: "26 to 100 employees", amount: "€4,000" },
+    { icon: "uil:building", name: "Large company", workers: "More than 100 employees", amount: "€3,000" },
   ],
-  featuredSolutionsTitle: "What CALCORP delivers (4 lines)",
-  featuredSolutionsIntro: "These are the four lines we implement to turn subsidy into outcomes.",
-  calcorpOfferBadge: "Implemented by CALCORP",
-  featuredSolutions: [
-    {
-      icon: "🌐",
-      title: "Website development",
-      amount: "€1,500",
-      subsidyRule: "Maximum subsidy: up to 65% of real cost (with a cap per solution).",
-      summary: "A website that works for you: catalog, contact and online sales when needed.",
-      features: [
-        "Professional design for mobile and desktop.",
-        "Easy content editing panel.",
-        "Domain and hosting setup.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "📈",
-      title: "Web positioning (SEO & SEM)",
-      amount: "€500",
-      subsidyRule: "Maximum subsidy: up to 65% of real cost (with a cap per solution).",
-      summary: "A website is not enough. You need to be found.",
-      features: [
-        "On-page and technical SEO.",
-        "Off-page SEO and brand signals.",
-        "Keywords + measurement for growth.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "🎓",
-      title: "Digitalization training",
-      amount: "€1,500",
-      subsidyRule: "Maximum subsidy: up to 75% of real cost (with a cap per solution).",
-      summary: "New tools without trained people? Waste. We fix that.",
-      features: [
-        "Hands-on training on key tools.",
-        "Real ERP/CRM adoption.",
-        "Cybersecurity best practices.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "🤖",
-      title: "Artificial intelligence",
-      amount: "€3,000",
-      subsidyRule: "Maximum subsidy: up to 75% of real cost (with a cap per solution).",
-      summary: "Automate repetitive work, save time, and decide faster with data.",
-      features: [
-        "Task automation.",
-        "Data analysis for smarter decisions.",
-        "Integration with your existing stack.",
-      ],
-      offeredByCalcorp: true,
-    },
+  servicesTitle: "Eligible services",
+  servicesIntro: "Click the i to see a quick detail of each service.",
+  infoSubsidyLabel: "Subsidy",
+  infoMaxLabel: "Max",
+  calculatorTitle: "Grant calculator",
+  calculatorIntro: "Toggle services on/off and estimate your scenario in real time.",
+  packMicro: "Micro pack",
+  packEcommerce: "Ecommerce pack",
+  packAutomation: "Automation pack",
+  packClear: "Clear",
+  colSelect: "✓",
+  colService: "Service",
+  colCost: "Service cost",
+  colPercent: "% grant",
+  colSubsidy: "Grant",
+  colFinal: "Final cost",
+  totalLabel: "Totals",
+  timelineTitle: "Application timeline (summary)",
+  timelineSteps: [
+    { title: "Check eligibility", body: "Company registered in Andorra, active in Registre de Comerç and correct employee tier." },
+    { title: "Define project", body: "Choose eligible services and validate fit with PDE catalog." },
+    { title: "Request quotes", body: "Get itemized quotes only from approved ICT providers." },
+    { title: "Open online application", body: "Go to andorra-digital.com > Programa de Digitalització d’Empreses (PDE)." },
+    { title: "Submit application", body: "Company details, project description and attached quotes." },
+    { title: "Wait for resolution", body: "Government validates technical and administrative conditions." },
+    { title: "Approval and amount", body: "Granted amount is confirmed by category (up to €6,000 total)." },
+    { title: "Execute project", body: "Do not start or pay before approved resolution." },
+    { title: "Justify expense", body: "Provide paid invoices and execution evidence." },
+    { title: "Grant payment", body: "Direct transfer after final Government validation." },
   ],
-  legalNotice: {
-    title: "Important legal note",
-    body:
-      "This page is informational. Legally binding information is only what appears on the official Andorra Digital / Government website.",
-  },
-  references: [
-    {
-      label: "Official website: Andorra Digital — PDE Digitalization Solutions",
-      url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
-    },
+  timelineNotes: [
+    "Applications are processed by arrival order until budget is exhausted.",
+    "Provider must be listed in the official ICT provider catalog.",
+    "Invoices paid before approval are not eligible.",
   ],
+  contactTitle: "Request a quote",
+  contactIntro: "Tell us what you want to activate and we’ll send a proposal.",
 };
 ---
 
 <Layout title={content.title}>
-  <AndorraGrantsPage content={content} />
+  <AndorraGrantsPage content={content} lang="en" />
 </Layout>

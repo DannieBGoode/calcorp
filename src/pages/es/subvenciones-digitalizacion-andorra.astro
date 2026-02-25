@@ -4,95 +4,65 @@ import AndorraGrantsPage from "@components/AndorraGrantsPage.astro";
 
 const content = {
   eyebrow: "Subvenciones en Andorra",
-  title: "PDE Andorra: dinero real para digitalizar tu empresa",
+  title: "PDE Andorra: digitaliza con cabeza y con números",
   intro:
-    "Corto y claro: aquí tienes lo que te pueden subvencionar y qué puede ejecutar CALCORP. Sin humo.",
+    "Aquí tienes una visión clara para decidir rápido: tramos por tamaño, servicios y estimación de ayuda.",
   officialSource: {
-    title: "Primero, la fuente oficial",
+    title: "Información PDE",
     description:
-      "Nosotros resumimos. La verdad legal y actualizada está en Andorra Digital / Gobierno.",
-    cta: "Ir a la página oficial del PDE",
+      "Información resumida con fines orientativos. Las condiciones legales y actualizadas son siempre las publicadas por Andorra Digital / Govern.",
+    cta: "Consultar información PDE",
+    footerCta: "Fuente oficial",
     url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
   },
-  companyBudgetTitle: "Partidas por tamaño de empresa",
-  companyBudgetIntro: "De menor a mayor tamaño. Confirma siempre importes y condiciones en la convocatoria vigente.",
+  companyBudgetTitle: "Importe orientativo por tamaño de empresa",
+  companyBudgetIntro: "Ordenado de menor a mayor tamaño.",
   companyBudgets: [
-    { icon: "👤", name: "Microempresa", workers: "1 a 5 trabajadores", amount: "6.000 €" },
-    { icon: "👥", name: "Pequeña empresa", workers: "6 a 25 trabajadores", amount: "5.500 €" },
-    { icon: "🏢", name: "Mediana empresa", workers: "26 a 100 trabajadores", amount: "4.000 €" },
-    { icon: "🏭", name: "Gran empresa", workers: "Más de 100 trabajadores", amount: "3.000 €" },
+    { icon: "uil:user", name: "Microempresa", workers: "1 a 5 empleados", amount: "6.000 €" },
+    { icon: "uil:users-alt", name: "Pequeña empresa", workers: "6 a 25 empleados", amount: "5.500 €" },
+    { icon: "uil:building", name: "Mediana empresa", workers: "26 a 100 empleados", amount: "4.000 €" },
+    { icon: "uil:building", name: "Gran empresa", workers: "Más de 100 empleados", amount: "3.000 €" },
   ],
-  featuredSolutionsTitle: "Lo que hace CALCORP (4 partidas)",
-  featuredSolutionsIntro: "Esto es lo que ejecutamos para que aproveches la subvención de verdad.",
-  calcorpOfferBadge: "CALCORP lo implementa",
-  featuredSolutions: [
-    {
-      icon: "🌐",
-      title: "Desarrollo de página web",
-      amount: "1.500 €",
-      subsidyRule: "Subvención máxima: hasta el 65% del coste real (con tope por solución).",
-      summary: "Tu web vende por ti: catálogo, contacto y opción de venta online si aplica.",
-      features: [
-        "Diseño profesional en móvil y escritorio.",
-        "Panel para editar contenidos sin depender de nadie.",
-        "Dominio y hosting listos.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "📈",
-      title: "Posicionamiento web (SEO y SEM)",
-      amount: "500 €",
-      subsidyRule: "Subvención máxima: hasta el 65% del coste real (con tope por solución).",
-      summary: "No basta con tener web. Hay que aparecer donde te buscan.",
-      features: [
-        "SEO on-page y técnico.",
-        "SEO off-page y señales de marca.",
-        "Keywords + medición para mejorar resultados.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "🎓",
-      title: "Formaciones en digitalización",
-      amount: "1.500 €",
-      subsidyRule: "Subvención máxima: hasta el 75% del coste real (con tope por solución).",
-      summary: "Herramientas nuevas + equipo sin formación = dinero tirado. Aquí lo evitamos.",
-      features: [
-        "Formación práctica en herramientas clave.",
-        "Uso real de ERP/CRM en tu operativa.",
-        "Buenas prácticas de ciberseguridad.",
-      ],
-      offeredByCalcorp: true,
-    },
-    {
-      icon: "🤖",
-      title: "Inteligencia artificial",
-      amount: "3.000 €",
-      subsidyRule: "Subvención máxima: hasta el 75% del coste real (con tope por solución).",
-      summary: "Automatiza tareas, gana tiempo y decide mejor con datos.",
-      features: [
-        "Automatización de tareas repetitivas.",
-        "Análisis de datos para decisiones rápidas.",
-        "Integración con tus sistemas actuales.",
-      ],
-      offeredByCalcorp: true,
-    },
+  servicesTitle: "Servicios subvencionables",
+  servicesIntro: "Haz clic en la i para ver detalle rápido de cada servicio.",
+  infoSubsidyLabel: "Subvención",
+  infoMaxLabel: "Máximo",
+  calculatorTitle: "Calculadora de subvención",
+  calculatorIntro: "Activa o desactiva servicios y calcula tu escenario en tiempo real.",
+  packMicro: "Pack microempresa",
+  packEcommerce: "Pack ecommerce",
+  packAutomation: "Pack automatización",
+  packClear: "Limpiar",
+  colSelect: "✓",
+  colService: "Servicio",
+  colCost: "Coste servicio",
+  colPercent: "% subv.",
+  colSubsidy: "Subvención",
+  colFinal: "Coste final",
+  totalLabel: "Totales",
+  timelineTitle: "Timeline de solicitud (resumen)",
+  timelineSteps: [
+    { title: "Verificar elegibilidad", body: "Empresa registrada en Andorra, activa en Registre de Comerç y tramo de empleados correcto." },
+    { title: "Definir proyecto", body: "Seleccionar servicios subvencionables y validar encaje con catálogo PDE." },
+    { title: "Pedir presupuestos", body: "Solicitar presupuestos desglosados solo a proveedores TIC homologados." },
+    { title: "Acceder a solicitud online", body: "Entrar en andorra-digital.com > Programa de Digitalització d’Empreses (PDE)." },
+    { title: "Rellenar solicitud", body: "Datos de empresa, descripción de proyecto y presupuestos adjuntos." },
+    { title: "Esperar resolución", body: "El Govern valida condiciones técnicas y administrativas." },
+    { title: "Aprobación e importe", body: "Se confirma la subvención concedida por categoría (hasta 6.000 € total)." },
+    { title: "Ejecutar proyecto", body: "No iniciar ni pagar antes de tener resolución aprobada." },
+    { title: "Justificar gasto", body: "Presentar facturas pagadas y evidencias de ejecución." },
+    { title: "Cobro", body: "Transferencia al solicitante tras validación final del Govern." },
   ],
-  legalNotice: {
-    title: "Aviso legal importante",
-    body:
-      "Esta página es informativa. La información legalmente vinculante es únicamente la publicada en la web oficial de Andorra Digital / Gobierno.",
-  },
-  references: [
-    {
-      label: "Web oficial: Andorra Digital — Soluciones de Digitalización PDE",
-      url: "https://andorra-digital.com/pde/solucions-digitalitzacio",
-    },
+  timelineNotes: [
+    "Las solicitudes se atienden por orden de llegada hasta agotar presupuesto.",
+    "El proveedor debe estar en el catálogo oficial de proveedores TIC.",
+    "No se subvencionan facturas pagadas antes de la aprobación.",
   ],
+  contactTitle: "Pide presupuesto",
+  contactIntro: "Cuéntanos qué quieres activar y te enviamos propuesta.",
 };
 ---
 
 <Layout title={content.title}>
-  <AndorraGrantsPage content={content} />
+  <AndorraGrantsPage content={content} lang="es" />
 </Layout>
