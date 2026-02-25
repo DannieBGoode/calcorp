@@ -64,9 +64,9 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
                 <div class="flex items-center gap-2">
                   <Icon name={service.icon} class="h-4 w-4 text-indigo-600" />
                   <span>{service.name[locale]}</span>
-                  <details class="relative ml-1 z-[90] info-popup">
-                    <summary class="flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-[10px] font-bold text-slate-600 list-none">i</summary>
-                    <div class="absolute left-0 z-[100] mt-2 w-64 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-700 shadow-xl">
+                  <details class="relative ml-1 z-10 info-popup">
+                    <summary class="info-trigger flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-[10px] font-bold text-slate-600 list-none">i</summary>
+                    <div class="absolute left-full top-1/2 z-[200] ml-2 -translate-y-1/2 w-64 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-700 shadow-xl">
                       <p>{service.description[locale]}</p>
                       <p class="mt-2 font-semibold text-indigo-700">
                         {content.infoSubsidyLabel}: {Math.round(service.subsidyPercent * 100)}% · {content.infoMaxLabel}: {formatEur(service.maxSubsidy)}
@@ -197,13 +197,21 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
 
 
   const infoPopups = Array.from(document.querySelectorAll("details.info-popup"));
-  infoPopups.forEach((popup) => {
-    popup.addEventListener("toggle", () => {
-      if (!popup.open) return;
-      infoPopups.forEach((other) => {
-        if (other !== popup) other.open = false;
-      });
+  const infoTriggers = Array.from(document.querySelectorAll("summary.info-trigger"));
+
+  infoTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      const popup = trigger.closest("details.info-popup");
+      const willOpen = !popup.open;
+      infoPopups.forEach((other) => (other.open = false));
+      popup.open = willOpen;
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("details.info-popup")) return;
+    infoPopups.forEach((popup) => (popup.open = false));
   });
 
   updateTotals();
