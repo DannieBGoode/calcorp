@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1772997763475" clover="3.2.0">
+  <project timestamp="1772997763475" name="All files">
+    <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5" elements="25" coveredelements="25" complexity="0" loc="16" ncloc="16" packages="2" files="3" classes="3"/>
+    <package name="content.grants">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="services-data.js" path="E:\Development\calcorp\src\content\grants\services-data.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="242" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="all.js" path="E:\Development\calcorp\src\utils\all.js">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="8" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="grants.js" path="E:\Development\calcorp\src\utils\grants.js">
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="21" count="26" type="stmt"/>
+        <line num="29" count="15" type="stmt"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+        <line num="43" count="11" type="stmt"/>
+        <line num="44" count="66" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="20" type="stmt"/>
+        <line num="50" count="20" type="stmt"/>
+        <line num="51" count="20" type="stmt"/>
+        <line num="55" count="11" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

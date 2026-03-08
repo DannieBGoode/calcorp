@@ -36,7 +36,7 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
     <h2 class="text-2xl font-semibold text-slate-900 text-center">{content.calculatorTitle}</h2>
     <p class="mt-3 text-slate-700 leading-relaxed text-center">{content.calculatorIntro}</p>
 
-    <div class="mt-5 flex flex-wrap justify-center gap-2" id="pack-buttons">
+    <div class="mt-5 flex flex-wrap justify-center gap-2" id="pack-buttons" data-packs={JSON.stringify(suggestedPacks)}>
       <button type="button" data-pack="micro" class="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">{content.packMicro}</button>
       <button type="button" data-pack="ecommerce" class="rounded-full bg-fuchsia-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-700">{content.packEcommerce}</button>
       <button type="button" data-pack="automation" class="rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700">{content.packAutomation}</button>
@@ -131,12 +131,13 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
   </section>
 </Container>
 
-<script is:inline define:vars={{ packs: suggestedPacks, locale }}>
-  const formatter = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const formatEur = (value) => `${formatter.format(value)} EUR`;
+<script>
+  import { formatEur, calculateSubsidy, calculateFinalCost } from "../utils/grants.js";
 
   const rows = Array.from(document.querySelectorAll("[data-service-row]"));
   const toggles = Array.from(document.querySelectorAll(".service-toggle"));
+  const packButtonsEl = document.getElementById("pack-buttons");
+  const packs = JSON.parse(packButtonsEl?.dataset.packs || "{}");
 
   function updateTotals() {
     let totalCost = 0;
@@ -151,8 +152,8 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
       const finalCell = row.querySelector(".final-cell");
 
       if (checkbox.checked) {
-        const subsidy = Math.min(cost * percent, max);
-        const finalCost = Math.max(cost - subsidy, 0);
+        const subsidy = calculateSubsidy(cost, percent, max);
+        const finalCost = calculateFinalCost(cost, subsidy);
         subsidyCell.textContent = formatEur(subsidy);
         finalCell.textContent = formatEur(finalCost);
         if (row.dataset.is75 === "true") {
@@ -171,12 +172,12 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
 
     document.getElementById("total-cost").textContent = formatEur(totalCost);
     document.getElementById("total-subsidy").textContent = formatEur(totalSubsidy);
-    document.getElementById("total-final").textContent = formatEur(Math.max(totalCost - totalSubsidy, 0));
+    document.getElementById("total-final").textContent = formatEur(calculateFinalCost(totalCost, totalSubsidy));
   }
 
   toggles.forEach((toggle) => toggle.addEventListener("change", updateTotals));
 
-  document.getElementById("pack-buttons")?.addEventListener("click", (event) => {
+  packButtonsEl?.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-pack]");
     if (!button) return;
     const pack = button.dataset.pack;
@@ -194,7 +195,6 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
     });
     updateTotals();
   });
-
 
   const infoPopups = Array.from(document.querySelectorAll("details.info-popup"));
   const infoTriggers = Array.from(document.querySelectorAll("summary.info-trigger"));

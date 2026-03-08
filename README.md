@@ -7,16 +7,31 @@ Marketing website for [Calcorp](https://calcorp.ad), a digital agency based in A
 - **[Astro 4](https://astro.build)** — static site generator
 - **[Tailwind CSS](https://tailwindcss.com)** — utility-first styling
 - **[Netlify](https://netlify.com)** — hosting and form handling
-- **pnpm** — package manager
+- **npm** — package manager
+- **[Vitest](https://vitest.dev)** — unit test runner
 
 ## Development
 
 ```bash
-pnpm install        # Install dependencies
-pnpm dev            # Start dev server at localhost:4321
-pnpm build          # Production build
-pnpm preview        # Preview production build locally
+npm install         # Install dependencies
+npm run dev         # Start dev server at localhost:4321
+npm run build       # Production build
+npm run preview     # Preview production build locally
 ```
+
+## Testing
+
+```bash
+npm test                # Run all tests once
+npm run test:watch      # Watch mode
+npm run test:coverage   # Run with coverage report
+```
+
+Tests live next to the source files they cover (`*.test.js`). The test suite covers:
+
+- `src/utils/all.js` — `getFormattedDate` utility
+- `src/utils/grants.js` — grants calculator logic (`calculateSubsidy`, `calculateFinalCost`, `calculateTotals`, `formatEur`)
+- `src/content/grants/services-data.js` — data integrity (unique IDs, valid rates, pack references)
 
 ## Deployment
 
@@ -56,5 +71,5 @@ To edit copy, modify the files in `src/content/` — not the components.
 ## Adding Integrations
 
 ```bash
-pnpm astro add <integration>
+npm run astro add <integration>
 ```
