@@ -8,6 +8,10 @@ export default [
     path: "/eor",
   },
   {
+    title: "Subvencions",
+    path: "/subvencions-digitalitzacio-andorra",
+  },
+  {
     title: "Sobre",
     path: "/about",
   },
