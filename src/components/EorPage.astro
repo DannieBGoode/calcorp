@@ -8,7 +8,7 @@ import Cta from "@components/cta.astro";
 const { content, lang = "en" } = Astro.props;
 ---
 
-<Layout title={content.title}>
+<Layout title={content.title} description={content.description}>
   <Container>
     <Sectionhead>
       <Fragment slot="title">{content.title}</Fragment>

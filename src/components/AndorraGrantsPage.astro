@@ -6,7 +6,8 @@ import { grantsServices, suggestedPacks } from "../content/grants/services-data.
 
 const { content, lang = "en" } = Astro.props;
 const locale = lang === "es" || lang === "cat" ? lang : "en";
-const localeCode = "en-US";
+const localeMap = { en: "en-US", es: "es-ES", cat: "ca-ES" };
+const localeCode = localeMap[locale] ?? "en-US";
 const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value)} EUR`;
 ---
 
@@ -59,11 +60,11 @@ const formatEur = (value) => `${new Intl.NumberFormat(localeCode, { minimumFract
       <table class="w-full min-w-[660px] text-sm">
         <thead class="bg-slate-50">
           <tr class="text-slate-700">
-            <th class="px-3 py-3 text-center">{content.colSelect}</th>
-            <th class="px-3 py-3 text-left">{content.colService}</th>
-            <th class="px-3 py-3 text-right">{content.colCost}</th>
-            <th class="px-3 py-3 text-right">{content.colSubsidy}</th>
-            <th class="px-3 py-3 text-right">{content.colFinal}</th>
+            <th scope="col" class="px-3 py-3 text-center">{content.colSelect}</th>
+            <th scope="col" class="px-3 py-3 text-left">{content.colService}</th>
+            <th scope="col" class="px-3 py-3 text-right">{content.colCost}</th>
+            <th scope="col" class="px-3 py-3 text-right">{content.colSubsidy}</th>
+            <th scope="col" class="px-3 py-3 text-right">{content.colFinal}</th>
           </tr>
         </thead>
         <tbody>

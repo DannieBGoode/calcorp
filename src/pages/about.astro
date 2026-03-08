@@ -10,6 +10,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title={aboutTexts.title}>
+<Layout title={aboutTexts.title} description={aboutTexts.description}>
   <AboutComponent texts={aboutTexts} teamMembers={publishedTeamMembers} />
 </Layout>

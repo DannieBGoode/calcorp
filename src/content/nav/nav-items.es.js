@@ -4,12 +4,11 @@ export default [
     path: "",
   },
   {
-    title: "EOR",
-    path: "/eor",
-  },
-  {
-    title: "Subvenciones",
-    path: "/subvenciones-digitalizacion-andorra",
+    title: "Andorra",
+    children: [
+      { title: "Employer of Record", path: "/eor" },
+      { title: "Subvenciones digitales", path: "/subvenciones-digitalizacion-andorra" },
+    ],
   },
   {
     title: "Nosotros",

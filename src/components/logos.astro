@@ -31,7 +31,7 @@ if (lang === "es") {
   <div class="flex gap-8 md:gap-16 items-center justify-center mt-10 flex-wrap">
     {
       clients.map(client => (
-        <a href={client.href} target="_blank" rel="noopener" title={client.name}>
+        <a href={client.href} target="_blank" rel="noopener noreferrer" title={client.name}>
           <div class="w-40 h-20 flex items-center justify-center overflow-hidden">
             <Image
               src={logoMap[client.name]}

@@ -4,9 +4,11 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/plus-jakarta-sans";
 import '@fontsource-variable/bricolage-grotesque';
+import { siteConfig } from "../content/site-config.js";
 
 export interface Props {
   title: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -16,7 +18,7 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, description = "Calcorp — Digital services and business solutions in Andorra." } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "Calcorp"
@@ -42,13 +44,15 @@ if (Astro.url.pathname.startsWith('/es/')) {
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Calcorp Andorra"
+      description={description}
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
+      {...(siteConfig.twitterHandle ? {
+        twitter: {
+          creator: siteConfig.twitterHandle,
+          site: siteConfig.twitterHandle,
+          card: "summary_large_image",
+        }
+      } : {})}
       openGraph={{
         basic: {
           url: canonicalURL,
@@ -63,10 +67,30 @@ if (Astro.url.pathname.startsWith('/es/')) {
     />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navbar />
-    <slot />
+    <main id="main-content">
+      <slot />
+    </main>
     <Footer />
     <style is:global>
+      /* Skip link — visually hidden until focused */
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        padding: 0.5rem 1rem;
+        background: #000;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        z-index: 9999;
+        transition: top 0.15s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {

@@ -4,12 +4,11 @@ export default [
     path: "",
   },
   {
-    title: "EOR",
-    path: "./eor",
-  },
-  {
-    title: "Grants",
-    path: "./andorra-digital-grants",
+    title: "Andorra",
+    children: [
+      { title: "Employee of Record", path: "/eor" },
+      { title: "Digitalization Grants", path: "/andorra-digital-grants" },
+    ],
   },
   {
     title: "About",
