@@ -32,14 +32,14 @@ if (lang === "es") {
   name="contact"
 >
   <input type="hidden" name="form-name" value="contact" />
-  <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+  <input type="checkbox" class="hidden" name="botcheck" />
   <div class="mb-5">
     <label for="name" class="sr-only">{texts.fullNamePlaceholder}</label><input
       id="name"
       type="text"
       placeholder={texts.fullNamePlaceholder}
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-slate-700 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
       name="name"
     />
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -53,7 +53,7 @@ if (lang === "es") {
       placeholder={texts.emailPlaceholder}
       name="email"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 placeholder:text-slate-700 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
       {texts.emailFeedback}
@@ -107,10 +107,13 @@ if (lang === "es") {
   }
 </style>
 
-<script is:inline>
+<script is:inline define:vars={{
+  sendingMessage: texts.sendingMessage,
+  successMessage: texts.successMessage,
+  errorMessage: texts.errorMessage,
+}}>
   const form = document.getElementById("form");
   const result = document.getElementById("result");
-  const formTexts = { ...texts }; // Ensure texts are available in the script
 
   function showResult(html, colorClass) {
     result.className = "mt-3 text-center result-msg " + (colorClass || "");
@@ -138,7 +141,7 @@ if (lang === "es") {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    showResult(formTexts.sendingMessage, "text-slate-500");
+    showResult(sendingMessage, "text-slate-500");
 
     fetch("/", {
       method: "POST",
@@ -151,15 +154,15 @@ if (lang === "es") {
       .then(async (response) => {
         await response.json();
         if (response.status == 200) {
-          showResult(formTexts.successMessage, "text-green-600");
+          showResult(successMessage, "text-green-600");
         } else {
           console.log(response);
-          showResult(formTexts.errorMessage, "text-red-500");
+          showResult(errorMessage, "text-red-500");
         }
       })
       .catch((error) => {
         console.log(error);
-        showResult(formTexts.errorMessage, "text-red-500");
+        showResult(errorMessage, "text-red-500");
       })
       .then(function () {
         form.reset();

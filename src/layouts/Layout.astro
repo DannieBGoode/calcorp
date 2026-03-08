@@ -2,7 +2,7 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/plus-jakarta-sans";
 import '@fontsource-variable/bricolage-grotesque';
 
 export interface Props {
@@ -112,6 +112,15 @@ if (Astro.url.pathname.startsWith('/es/')) {
         }, { threshold: 0.12 });
         document.querySelectorAll('[data-reveal]').forEach(function (el) {
           observer.observe(el);
+        });
+
+        /* Sync aria-expanded on language picker buttons with dropdown open state */
+        document.querySelectorAll('.astronav-dropdown').forEach(function (dropdown) {
+          var btn = dropdown.querySelector('button[aria-expanded]');
+          if (!btn) return;
+          new MutationObserver(function () {
+            btn.setAttribute('aria-expanded', dropdown.hasAttribute('open') ? 'true' : 'false');
+          }).observe(dropdown, { attributes: true, attributeFilter: ['open'] });
         });
       })();
     </script>
