@@ -73,7 +73,7 @@ if (lang === "es") {
     </div>
   </div>
   <Button type="submit" size="lg" block>{texts.sendMessageButton}</Button>
-  <div id="result" class="mt-3 text-center"></div>
+  <div id="result" class="mt-3 text-center result-msg" aria-live="polite"></div>
 </form>
 
 <style>
@@ -94,12 +94,30 @@ if (lang === "es") {
   .was-validated :invalid {
     border-color: #dc3545;
   }
+
+  @keyframes resultIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-msg.is-visible {
+    animation: resultIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  }
 </style>
 
 <script is:inline>
   const form = document.getElementById("form");
   const result = document.getElementById("result");
   const formTexts = { ...texts }; // Ensure texts are available in the script
+
+  function showResult(html, colorClass) {
+    result.className = "mt-3 text-center result-msg " + (colorClass || "");
+    result.innerHTML = html;
+    result.style.display = "";
+    // Trigger animation
+    void result.offsetWidth;
+    result.classList.add("is-visible");
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -112,7 +130,7 @@ if (lang === "es") {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = formTexts.sendingMessage;
+    showResult(formTexts.sendingMessage, "text-slate-500");
 
     fetch("/", {
       method: "POST",
@@ -123,25 +141,24 @@ if (lang === "es") {
       body: json,
     })
       .then(async (response) => {
-        let json = await response.json();
+        await response.json();
         if (response.status == 200) {
-          result.classList.add("text-green-500");
-          result.innerHTML = formTexts.successMessage;
+          showResult(formTexts.successMessage, "text-green-600");
         } else {
           console.log(response);
-          result.classList.add("text-red-500");
-          result.innerHTML = formTexts.errorMessage;
+          showResult(formTexts.errorMessage, "text-red-500");
         }
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = formTexts.errorMessage;
+        showResult(formTexts.errorMessage, "text-red-500");
       })
       .then(function () {
         form.reset();
         form.classList.remove("was-validated");
         setTimeout(() => {
           result.style.display = "none";
+          result.className = "mt-3 text-center result-msg";
         }, 5000);
       });
   });
