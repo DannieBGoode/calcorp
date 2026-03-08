@@ -1,7 +1,18 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import { clients } from "../content/clients.js";
+
+import summitImg from "../assets/logos/image.webp";
+import iohkImg from "../assets/logos/iohk-logo-vector.svg";
+import moralisImg from "../assets/logos/Moralis-Developers-Logo-Light.webp";
+import identusImg from "../assets/logos/identus-navbar-light.png";
+
+const logoMap = {
+  "Summit Advisors": summitImg,
+  "IOHK": iohkImg,
+  "Moralis": moralisImg,
+  "Hyperledger Identus": identusImg,
+};
 
 const { lang = "en" } = Astro.props;
 
@@ -22,11 +33,12 @@ if (lang === "es") {
       clients.map(client => (
         <a href={client.href} target="_blank" rel="noopener" title={client.name}>
           <div class="w-40 h-20 flex items-center justify-center overflow-hidden">
-            <img
-              src={client.imgSrc}
+            <Image
+              src={logoMap[client.name]}
               alt={client.alt}
               width={client.width}
               height={client.height}
+              loading="lazy"
               class="object-contain filter transition w-full h-full"
             />
           </div>

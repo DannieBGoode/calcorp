@@ -34,7 +34,8 @@ if (lang === "es") {
   <input type="hidden" name="form-name" value="contact" />
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
-    <input
+    <label for="name" class="sr-only">{texts.fullNamePlaceholder}</label><input
+      id="name"
       type="text"
       placeholder={texts.fullNamePlaceholder}
       required
@@ -62,7 +63,8 @@ if (lang === "es") {
     </div>
   </div>
   <div class="mb-3">
-    <textarea
+    <label for="message" class="sr-only">{texts.messagePlaceholder}</label><textarea
+      id="message"
       name="message"
       required
       placeholder={texts.messagePlaceholder}
