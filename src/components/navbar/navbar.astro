@@ -1,6 +1,5 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
@@ -53,7 +52,7 @@ const languages = [
           <MenuIcon class="w-4 h-4 text-slate-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto lg:flex absolute top-full -left-5 -right-5 bg-white border-t border-slate-100 shadow-lg z-50 px-4 pb-4 lg:static lg:shadow-none lg:border-0 lg:bg-transparent lg:px-0 lg:pb-0">
+      <MenuItems class="hidden lg:w-auto lg:flex absolute top-full -left-5 -right-5 bg-white border-t border-slate-100 shadow-lg z-50 px-4 pb-4 lg:static lg:shadow-none lg:border-0 lg:bg-transparent lg:px-0 lg:pb-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
