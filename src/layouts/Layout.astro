@@ -74,7 +74,8 @@ if (Astro.url.pathname.startsWith('/es/')) {
       }
 
       /* ── Scroll-reveal system ── */
-      [data-reveal] {
+      /* Gate behind .js-ready so content is visible if JS fails to load */
+      .js-ready [data-reveal] {
         opacity: 0;
         transform: translateY(18px);
         transition:
@@ -82,12 +83,12 @@ if (Astro.url.pathname.startsWith('/es/')) {
           transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
         transition-delay: var(--reveal-delay, 0s);
       }
-      [data-reveal].is-visible {
+      .js-ready [data-reveal].is-visible {
         opacity: 1;
         transform: translateY(0);
       }
       @media (prefers-reduced-motion: reduce) {
-        [data-reveal] {
+        .js-ready [data-reveal] {
           opacity: 1;
           transform: none;
           transition: none;
@@ -97,6 +98,9 @@ if (Astro.url.pathname.startsWith('/es/')) {
 
     <script is:inline>
       (function () {
+        /* Mark JS as available — gates the scroll-reveal CSS */
+        document.documentElement.classList.add('js-ready');
+
         /* Scroll-reveal observer */
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {

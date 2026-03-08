@@ -31,16 +31,16 @@ if (lang === "es") {
         </p>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" aria-hidden="true" />
             <span>{texts.address}</span>
           </div>
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" aria-hidden="true" />
             <a href={`mailto:${texts.email}`}>{texts.email}</a>
           </div>
           {texts.phone && texts.phone.trim() !== "" && (
             <div class="flex items-center mt-2 space-x-2 text-gray-600">
-              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" aria-hidden="true" />
               <a href={`tel:${texts.phone}`}>{texts.phone}</a>
             </div>
           )}

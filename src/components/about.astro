@@ -50,7 +50,7 @@ const { texts, teamMembers } = Astro.props as AboutProps;
               sizes="(max-width: 800px) 100vw, 400px"
               width={400}
               height={400}
-              class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+              class="team-photo w-full rounded-md bg-white object-cover object-center aspect-square"
             />
           </div>
 
@@ -65,3 +65,13 @@ const { texts, teamMembers } = Astro.props as AboutProps;
     }
   </div>
 </Container>
+
+<style>
+  .team-photo {
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+  .group:hover .team-photo {
+    transform: translateY(-4px);
+  }
+</style>

@@ -21,7 +21,7 @@ if (lang === "es") {
   <div class="py-6 md:order-1 hidden md:block hero-image">
     <Picture
       src={heroImage}
-      alt="Astronaut in the air"
+      alt=""
       widths={[200, 400, 600]}
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
@@ -42,7 +42,7 @@ if (lang === "es") {
         href="#services"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" aria-hidden="true" />
          {heroTexts.exploreServices}
       </Link>
       <Link
@@ -57,7 +57,7 @@ if (lang === "es") {
             : "/contact"
         }
         class="flex gap-1 items-center justify-center">
-        <Icon class="text-black w-4 h-4" name="bx:bxs-message" />
+        <Icon class="text-black w-4 h-4" name="bx:bxs-message" aria-hidden="true" />
          {heroTexts.contactUs}
       </Link>
     </div>

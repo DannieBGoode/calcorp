@@ -121,6 +121,8 @@ if (lang === "es") {
     result.classList.add("is-visible");
   }
 
+  var submitBtn = form.querySelector('[type="submit"]');
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     form.classList.add("was-validated");
@@ -128,6 +130,10 @@ if (lang === "es") {
       form.querySelectorAll(":invalid")[0].focus();
       return;
     }
+
+    // Prevent double-submission
+    submitBtn.disabled = true;
+
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -158,6 +164,7 @@ if (lang === "es") {
       .then(function () {
         form.reset();
         form.classList.remove("was-validated");
+        submitBtn.disabled = false;
         setTimeout(() => {
           result.style.display = "none";
           result.className = "mt-3 text-center result-msg";

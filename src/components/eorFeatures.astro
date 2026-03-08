@@ -13,7 +13,7 @@ if (lang === "es") {
 }
 ---
 
-<div id="benefits" class="mt-16">
+<div id="benefits" class="mt-16" data-reveal>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     {eorFeatures.heading}
   </h2>
@@ -24,9 +24,9 @@ if (lang === "es") {
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
-    eorFeatures.features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+    eorFeatures.features.map((item, index: number) => (
+      <div class="feature-card flex gap-4 items-start" data-reveal style={`--reveal-delay: ${index * 0.05}s`}>
+        <div class="feature-icon mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
@@ -37,3 +37,13 @@ if (lang === "es") {
     ))
   }
 </div>
+
+<style>
+  .feature-icon {
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+  .feature-card:hover .feature-icon {
+    transform: scale(1.15) rotate(-8deg);
+  }
+</style>
